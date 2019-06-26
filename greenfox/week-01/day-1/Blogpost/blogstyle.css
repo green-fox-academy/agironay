@@ -1,0 +1,63 @@
+
+body {
+    margin: 0 10%;
+    background-image: url("https://i.pinimg.com/originals/5d/ea/0c/5dea0c6633922cf4bcf56b2d14291edf.jpg")
+}
+
+.allmid {
+    margin: auto 15%;
+}
+
+header {
+    /*background-color: lightsalmon;
+    border: dashed 1px lightgrey;*/
+    height: 50px;
+    width: 500px;
+}
+
+header h1 {
+    font-size: 25px;
+    text-align: left;
+    font-family: Arial;
+    padding: auto;
+    margin: 0 30%;
+}
+
+h2 {
+    font-family: lucida sans;
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 15px;
+    font-family: arial;
+}
+
+button {
+    background-color: lightgray;
+    width: 60px;
+    height: 20px;
+    border: dotted 1px black;
+    border-radius: 10px;
+}
+button:hover {
+    transition: 200ms;
+    background-color: lightpink;
+}
+
+.content p {
+    border: solid 1px black;
+    width: 500px;
+    padding: 5px;
+}
+
+.post {
+    border: solid 1px black;
+    width: 500px;
+    padding: 5px;
+}
+
+.post h3 {
+    font-size: 20px;
+    margin-top: 5px;
+}
