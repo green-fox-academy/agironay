@@ -27,19 +27,19 @@ if (b >= 10 && b < 20) {
 }
 console.log(out2);
 
-/*
-let c: number = 123;
-let credits: number = 100;
-let isBonus: boolean = false;
-
 // if credits are at least 50,
 // and is_bonus is false decrement c by 2
 // if credits are smaller than 50,
 // and is_bonus is false decrement c by 1
 // if is_bonus is true c should remain the same
 
+let c: number = 123;
+let credits: number = 100;
+let isBonus: boolean = false;
+
 console.log(c);
 
+/*
 let d: number =  8;
 let time: number = 120;
 let out3: string = '';
