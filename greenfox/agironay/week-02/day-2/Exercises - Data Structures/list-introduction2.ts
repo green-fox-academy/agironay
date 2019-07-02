@@ -2,7 +2,7 @@
 
 let ListA: string[] = ['Apple', 'Avocado', 'Blueberries', 'Durian', 'Lychee'];
 
-let ListB: string[] = ['Apple', 'Avocado', 'Blueberries', 'Durian', 'Lychee'];//copy the elements without referencing it 
+let ListB: string[] = [...ListA];
 
 if (ListA.includes ('Durian')) {
     console.log("YAY IT HAS IT");
