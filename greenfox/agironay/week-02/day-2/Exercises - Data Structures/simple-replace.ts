@@ -5,7 +5,7 @@
 // Expected ouput: In a galaxy far far away
 
 
-let example: string = 'In a dishwasher far far away'.replace(/dishwasher/g,'galaxy');
+let example: string = 'In a dishwasher far far away'.replace(/dishwasher/,'galaxy');
 console.log(example);
 
 export = example;
