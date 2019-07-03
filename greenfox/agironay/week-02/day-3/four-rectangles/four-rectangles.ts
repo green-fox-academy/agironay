@@ -8,29 +8,17 @@ const ctx = canvas.getContext('2d');
 // Draw four different size and color rectangles.
 // Avoid code duplication.
 
-//let colorRect: string[] = ['green', 'blue', 'red', 'yellow'];
+
 
 function fourDiffRects (x,y,width,height) {
-    ctx.beginPath();
-    for (let i: number = 0; i<=4 ; i++) {
+    for (let i: number = 0; i<4 ; i+=1) {
+        let colorRect: string[] = ['green', 'blue', 'red', 'yellow'];
         ctx.fillStyle = colorRect[i];
-    }
-    for (let j: number = 1; j <= 4; j++){
-
-    
-        ctx.fillRect(0,0,60,90);
+        }
+    for (let j: number = 1; j <=4; j++){
+        ctx.beginPath();
+        ctx.fillRect(x*j,y*j,width+10*j,height+2*j);
             ctx.stroke();
     }
-        }
-fourDiffRects(0,0,0,0)
-
-function drawSquare (x,y) {
-    ctx.fillStyle='blue';
-    for (let i: number = 1; i <=3; i++) {
-        ctx.beginPath();
-        ctx.fillRect(x*i,y*i,50,50);
-        ctx.stroke();
-    }
-}
-
-drawSquare(150,100);
+}    
+fourDiffRects(50,30,0,55)
