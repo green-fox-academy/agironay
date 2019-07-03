@@ -23,3 +23,5 @@ thisMap.set("978-1-60309-453-5", "Why Did We Trust Him?");
 console.log(thisMap.has(478-0-61159-424-8));
 
 console.log(thisMap.has(978-1-60309-453-5));
+
+console.log(thisMap)
