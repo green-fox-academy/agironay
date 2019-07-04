@@ -2,10 +2,15 @@
 
 // Write a function called `sum` that returns the sum of numbers from zero to the given parameter
 
-function numSum(upTo: number): number {
+
+let end: number = 0;
+
+function summ(upTo: number) {
+    
     for (let i: number = 0; i <= upTo; i++) {
-        return upTo += upTo;
+        end = end+i;
     }
+    return console.log(end);
 }
 
-numSum(3);
+summ(5);
