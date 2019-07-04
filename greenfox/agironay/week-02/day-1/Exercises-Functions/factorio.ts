@@ -3,10 +3,13 @@
 
 //3! 3*2*1
 
+let sumFact: number = 1;
+
 function factorio(nummie: number) {
-    for (let i: number = 1; i >= nummie; i--) {
-        return  nummie * (i-1);
+    for (let i: number = nummie; i >= 1; --i) {
+        sumFact = sumFact*i;
     }
+    return  sumFact;
 }
 
-console.log(factorio(3));
+console.log(factorio(5));
