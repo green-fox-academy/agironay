@@ -19,16 +19,13 @@ canvas.height = myCanvasHeight;
 
 function drawSquare(wh: number) {
     ctx.beginPath();
-    ctx.fillStyle = 'red';
-    ctx.strokeRect((myCanvasWidth / 2 - wh / 2), (myCanvasHeight / 2 - wh / 2), wh, wh);
+    ctx.fillRect((myCanvasWidth / 2 - wh / 2), (myCanvasHeight / 2 - wh / 2), wh, wh);
     ctx.stroke()
 }
 
 //draws 7 squares that are increasing in size
-for (let i: number = 0; i <= 7; i ++) {
-    drawSquare(50*i);
+for (let i: number = 6; i >= 0; i--) {
+    let colorss: string[] = ['red', 'orange', 'yellow', 'green', 'lightblue', 'blue', 'purple'];
+    ctx.fillStyle = colorss[i];
+    drawSquare(50*(i+1));
  }
-
-
-let colorss: string[] = ['red', 'orange', 'yellow', 'green', 'ligthblue', 'blue', 'purple'];
-let colorssIndex: number= 0;

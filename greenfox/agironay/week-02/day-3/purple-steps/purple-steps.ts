@@ -9,12 +9,6 @@ const ctx = canvas.getContext('2d');
 // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/assets/r3.png]
 
 
-const myCanvasWidth: number = 600;
-const myCanvasHeight: number = 400;
-
-canvas.width = myCanvasWidth;
-canvas.height = myCanvasHeight;
-
 function drawSquare (x: number, wh:number) {
     ctx.beginPath();
     ctx.fillStyle = 'rgb(147,112,219';
@@ -24,6 +18,6 @@ function drawSquare (x: number, wh:number) {
 }
 
 for (let i: number = 0; i <= 15; i++){
-    drawSquare(i*15,15);
+    drawSquare(i*15,15*j);
 }
 
