@@ -7,7 +7,7 @@
 
 let nameToGreet = "Green Fox";
 
-function greet (name: string) {
-console.log('Hi' ,name+'!');
+function greet(name: string) {
+    console.log('Hi', name + '!');
 }
 greet(nameToGreet);

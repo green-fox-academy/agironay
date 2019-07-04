@@ -8,16 +8,16 @@ function drawSquare(x: number, y: number, width:number, hight:number, colors:str
    ctx.beginPath();
    ctx.fillRect(x, y, width, hight)
    ctx.stroke()
-}
 
+}
 
 
 let sum: number = 15
 
 for (let i = 0; i < 4; i += 1) {
-   drawSquare(sum, sum, sum, sum,colorArray);
+   drawSquare(sum, sum, sum, sum, colorArray);
    colorIndex = colorIndex + 1;
    sum = sum + sum;
 
 }
-drawSquare(10, 10, 50, 50);
+drawSquare(10, 10, 50, 50, colorArray);

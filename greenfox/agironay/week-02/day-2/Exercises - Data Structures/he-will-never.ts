@@ -7,7 +7,7 @@
 let out: string = '';
 let notSoCrypticMessage: number[] = [1, 12, 1, 2, 11, 1, 7, 11, 1, 49, 1, 3, 11, 1, 50, 11];
 
-let hashmap: any= {
+let hashmap: any = {
   7: 'run around and desert you',
   50: 'tell a lie and hurt you ',
   49: 'make you cry, ',
@@ -18,11 +18,10 @@ let hashmap: any= {
   3: 'say goodbye '
 };
 
-/*for (let i: number = 1; i <= notSoCrypticMessage.length; i++) {
-    notSoCrypticMessage(hashmap[i]);
+for (let i: number = 0; i <= notSoCrypticMessage.length; i++) {
+  if (notSoCrypticMessage[i] == hashmap[i]) {
+  
+  }
+}
 
-}*/
-
-
-
-console.log(out)
+//console.log(out);
