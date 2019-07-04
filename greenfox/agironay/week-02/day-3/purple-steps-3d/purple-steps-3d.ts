@@ -16,9 +16,8 @@ function drawSquare(x: number, wh: number) {
     ctx.strokeRect(x, x, wh, wh);
 }
 
-
-for (let i: number = 0; i < 6; i++) {
-    for (let j: number = 0; j <= 6; j*=2) {
-        drawSquare(i*20, j+15);
-    }
+let toRight: number = 0;
+for (let i: number = 1; i <= 6; i++) {
+    toRight= toRight+(i-1);
+    drawSquare(15 * toRight, i * 15);
 }
