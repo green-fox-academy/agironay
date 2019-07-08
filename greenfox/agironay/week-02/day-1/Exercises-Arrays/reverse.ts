@@ -17,25 +17,3 @@ for (let i: number = 0; i < numList2.length; i++) {
     newList = numList2[i];
     //console.log(newList);
 }
-
-/*var itemsToIterate = myItems.slice(0).reverse();
-
-for (var i = 0, len = itemsToIterate.length; i < len; i++) {
-    var item = itemsToIterate[i];
-}*/
-
-
-
-/*function temporarySwap(array)
-{
-    var left = null;
-    var right = null;
-    var length = array.length;
-    for (left = 0, right = length - 1; left < right; left += 1, right -= 1)
-    {
-        var temporary = array[left];
-        array[left] = array[right];
-        array[right] = temporary;
-    }
-    return array;
-}*/
