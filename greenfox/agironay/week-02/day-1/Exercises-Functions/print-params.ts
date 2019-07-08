@@ -2,9 +2,12 @@
 //    which logs to the console the input parameters
 //    (can have multiple number of arguments)
 
-let myParams: number[] = [5,6,7,8];
+'use strict;'
 
-function printParams (myParams: number) {
-    console.log(printParams);
+function printParams(...params: any[]): any {
+    params.forEach(function(args){
+        console.log(args);
+    })
 }
 
+printParams('hi', 12345, 'yep these are numbers and strings')
