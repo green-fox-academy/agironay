@@ -1,0 +1,5 @@
+hi
+these are random contents of a txt file
+i hope to see them in the other file
+adding something just in case
+file copying is fun
