@@ -20,9 +20,8 @@ function writeToFile(path: string, words: string, num: number): any {
         console.log('wtf is going on');
     }
     for (let i: number = 1; i <= num; i++) {
-        //console.log(words);
+        addWhereWhatHowmany = fs.appendFileSync(path, words);
     }
-    addWhereWhatHowmany = fs.writeFileSync(path, words);
 }
 
 try {
