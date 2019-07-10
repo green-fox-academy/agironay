@@ -25,6 +25,26 @@ let Animal1: Animal = new Animal(50,50);
 let Animal2: Animal = new Animal(50,50);
 let Animal3: Animal = new Animal(50,50);
 
-Animal1.canDrink();
 
+Animal1.canDrink();
+Animal1.canDrink();
+Animal1.canDrink();
+Animal1.canEat();
+Animal1.canPlay();
 console.log(Animal1);
+
+Animal2.canDrink();
+Animal2.canDrink();
+Animal2.canDrink();
+Animal2.canDrink();
+Animal2.canDrink();
+Animal2.canEat();
+Animal2.canEat();
+Animal2.canEat();
+Animal2.canEat();
+console.log(Animal2);
+
+
+Animal3.canPlay();
+Animal3.canPlay();
+console.log(Animal3);
