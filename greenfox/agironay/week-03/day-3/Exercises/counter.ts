@@ -7,8 +7,8 @@ class Counter {
         this.integer = integer;
     }
 
-    addNum(number): number{
-        return this.integer+=number;
+    addNum(number): number {
+        return this.integer += number;
     }
 
     add(): number {
@@ -16,11 +16,11 @@ class Counter {
     }
 
     get(): void {
-        return console.log('Currently our number is: ',this.integer);
+        return console.log('Currently our number is: ', this.integer);
     }
 
     reset(): number {
-        return this.integer=0;
+        return this.integer = 0;
     }
 }
 
