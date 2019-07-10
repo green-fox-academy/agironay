@@ -1,3 +1,5 @@
+'use strict';
+
 class Animal {
     hunger: number= 50;
     thirst: number= 50;
