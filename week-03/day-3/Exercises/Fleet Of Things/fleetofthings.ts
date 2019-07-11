@@ -3,16 +3,30 @@
 import { Thing } from './thing';
 import { Fleet } from './fleet';
 
-let fleet = new Fleet();
-
 class FleetOfThings {
-    fleet: Fleet;
-    main(){
-        this.fleet = new Fleet();
+    fleet: Fleet = new Fleet;
+    
+    constructor() {
+        this.fleet.add(new Thing('Get Milk'));
+        this.fleet.add(new Thing('Remove the obstacles'));
+        this.fleet.add((new Thing('Stand up')));
+        this.fleet.add(new Thing('Eat lunch'));
 
+
+        console.log(this.fleet.getThings().length)
+    }
+
+    print(): string{
+        let outcome: string = '';
+        this.fleet.getThings().forEach(function(fleet){
+            outcome += fleet
+        });
+        return outcome
     }
 }
 
+let finalToDoList: FleetOfThings = new FleetOfThings();
+console.log(finalToDoList.print());
 
 
 // -  You have the `Thing` class
@@ -29,3 +43,17 @@ class FleetOfThings {
 // 4. [x] Eat lunch
 
 // Hint: You have to create a `print()` method as well
+
+
+/* class FleetOfThings {
+    fleet: Fleet;
+    main() {
+        this.fleet = new Fleet();
+
+
+        constructor(){
+            let Fleet: Fleet = new Fleet('Get milk');
+        }
+
+    }
+} */
