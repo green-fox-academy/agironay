@@ -6,7 +6,11 @@ import { Fleet } from './fleet';
 let fleet = new Fleet();
 
 class FleetOfThings {
+    fleet: Fleet;
+    main(){
+        this.fleet = new Fleet();
 
+    }
 }
 
 
@@ -17,7 +21,7 @@ class FleetOfThings {
 // -  Download those, use those
 // -  In the `main` method create a fleet
 // -  Achieve this output:
-//  Crete a fleet of things to have this output:
+//  Create a fleet of things to have this output:
 
 // 1. [ ] Get milk
 // 2. [ ] Remove the obstacles

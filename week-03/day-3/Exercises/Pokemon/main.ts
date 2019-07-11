@@ -14,7 +14,7 @@ let wildPokemon: Pokemon = new Pokemon('Oddish', 'leaf', 'water');
 
 // Which pokemon should Ash use?
 
-console.log('I choose you, ');
+//console.log('I choose you, ');
 
 function initializePokemon(): Pokemon[] {
     return [
@@ -26,13 +26,18 @@ function initializePokemon(): Pokemon[] {
     ];
 }
 
+let isEffectiveAgainst(pokemon: Pokemon)
+isEffectiveAgainst
+
 let whoToChoose: string = '';
-function whoToChoose(): void {
-    for (let i: number = 0; i <= 5; i++) {
+function whichToChoose(): void {
+    for (let i: number = 0; i <= initializePokemon.length; i++) {
         initializePokemon[i].isEffectiveAgainst(wildPokemon);
     }
 }
 
+
+//console.log('I choose you, ',whichToChoose());
 
 /* for (let i: number = 0; i <= initializePokemon().length; i++) {
 if (initializePokemon()[i] == wildPokemon[2]){
