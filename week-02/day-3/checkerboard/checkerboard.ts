@@ -17,32 +17,27 @@ function drawSquare(xCo: number, yCo: number, size: number): void {
     ctx.stroke();
 }
 
-drawSquare(0,0,50);
+drawSquare(0, 0, 50);
 
+//it's not letting me redo it by giving one variable instead of two.
 let toRight: number = 100;
+let toDown: number = 100;
 
-function moveSquare(toRight: number): void {
+function moveSquareDownAndRight(toRight: number): void {
     for (let i: number = 0; i <= 4; i++) {
-        drawSquare(toRight*i,0, 50);
+        for (let j: number = 0; j <= 4; j++) {
+            drawSquare(toRight * i, toDown * j, 50);
+        }
     }
 }
-moveSquare(toRight);
+moveSquareDownAndRight(toRight);
 
-let toDown: number = 100;
-function moveSquareDown(toDown: number): void{
-    for (let j: number = 0; j<=4; j++) {
-        drawSquare(0,toDown*j,50)
+
+function moveSquareDownAndRight2(toRight: number): void {
+    for (let k: number = 0; k <= 4; k++) {
+        for (let l: number = 0; l <= 4; l++) {
+            drawSquare((toRight * k)+50, (toDown * l)+50, 50);
+        }
     }
 }
-
-moveSquareDown(toDown);
-
-/* 
-let toDown: number = 100;
-function movedownSquare(toDown: number): void{
-    for (let j: number = 0; j<=4; j++){
-        drawSquare(toDown*100,0,100);
-    }
-}
-
-moveSquare(toDown); */
+moveSquareDownAndRight2(toRight);
