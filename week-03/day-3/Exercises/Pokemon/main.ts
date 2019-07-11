@@ -26,23 +26,8 @@ function initializePokemon(): Pokemon[] {
     ];
 }
 
-let isEffectiveAgainst(pokemon: Pokemon)
-isEffectiveAgainst
-
-let whoToChoose: string = '';
-function whichToChoose(): void {
-    for (let i: number = 0; i <= initializePokemon.length; i++) {
-        initializePokemon[i].isEffectiveAgainst(wildPokemon);
+for (let i: number = 0; i <= pokemonOfAsh.length; i++) {
+    if (initializePokemon()[i].isEffectiveAgainst(wildPokemon)) {
+        console.log('I choose you ',initializePokemon()[i].name);
     }
 }
-
-
-//console.log('I choose you, ',whichToChoose());
-
-/* for (let i: number = 0; i <= initializePokemon().length; i++) {
-if (initializePokemon()[i] == wildPokemon[2]){
-console.log('I choose you bro')
-} else {
-console.log('next');
-}
-} */
