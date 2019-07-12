@@ -19,6 +19,8 @@ const myCanvasHeight: number = 400;
 let PointsToConnect: any[] = [[10, 10], [290,  10], [290, 290], [10, 290]];
 let PointsToConnect2: any[] = [[50, 100], [70, 70], [80, 90], [90, 90], [100, 70],[120, 100], [85, 130], [50, 100]];
 
+//lol ok do a function tho
+
 function connectDots() {
     ctx.strokeStyle = 'green';
     ctx.moveTo(10,10);
