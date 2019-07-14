@@ -9,7 +9,7 @@ class Student {
         this.grades = grades;
     }
     learn() {
-        console.log(this.name + ' is finally learning something new! Her grades so far are ',this.grades);
+        console.log(this.name + ' is finally learning something new! Her grades so far are ', this.grades);
     }
 
     question(teacher: Teacher): void {
@@ -31,12 +31,12 @@ class Teacher {
     }
 
     answer() {
-        console.log(this.name ,'who is the teacher is answering a question');
+        console.log(this.name, 'who is the teacher, is answering a question');
     }
 
 }
 
-let student1: Student = new Student('Mariska','BAD');
+let student1: Student = new Student('Mariska', 'BAD');
 let teacher1: Teacher = new Teacher('Lajos');
 
 teacher1.teach(student1);
