@@ -1,5 +1,5 @@
 'use strict';
-class Sharpie {
+export class Sharpie {
     color: string;
     width: number;
     inkAmount: number = 100;
