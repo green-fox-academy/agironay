@@ -26,8 +26,17 @@ function initializePokemon(): Pokemon[] {
     ];
 }
 
-for (let i: number = 0; i <= pokemonOfAsh.length; i++) {
+/* for (let i: number = 0; i <= pokemonOfAsh.length; i++) {
     if (initializePokemon()[i].isEffectiveAgainst(wildPokemon)) {
         console.log('I choose you ',initializePokemon()[i].name);
     }
-}
+} */// worked but still had error messages :( 
+
+let ChooseThis: Pokemon;
+initializePokemon().forEach(function (Pokemon: Pokemon) {
+    if (Pokemon.isEffectiveAgainst(wildPokemon)) {
+        ChooseThis = Pokemon;
+    }
+});
+
+console.log("I choose you, " + ChooseThis.name);
