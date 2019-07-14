@@ -8,7 +8,6 @@ const ctx = canvas.getContext('2d');
 const myCanvasWidth: number = 400;
 const myCanvasHeight: number = 400;
 
-
 // Create a function that takes 1 parameter:
 // A list of [x, y] points
 // and connects them with green lines.
@@ -16,33 +15,22 @@ const myCanvasHeight: number = 400;
 // Connect these: [[50, 100], [70, 70], [80, 90], [90, 90], [100, 70],
 // [120, 100], [85, 130], [50, 100]]
 
-let PointsToConnect: any[] = [[10, 10], [290,  10], [290, 290], [10, 290]];
-let PointsToConnect2: any[] = [[50, 100], [70, 70], [80, 90], [90, 90], [100, 70],[120, 100], [85, 130], [50, 100]];
+let PointsToConnect: number[][] = [[10, 10], [290, 10], [290, 290], [10, 290]];
+let PointsToConnect2: number[][] = [[50, 100], [70, 70], [80, 90], [90, 90], [100, 70], [120, 100], [85, 130], [50, 100]];
 
-//lol ok do a function tho
 
-function connectDots() {
+function connectDots(dots: number[][]) {
     ctx.strokeStyle = 'green';
-    ctx.moveTo(10,10);
-    ctx.lineTo(290,10);
-    ctx.lineTo(290, 290);
-    ctx.lineTo(10,290);
-    ctx.lineTo(10,10);
-    ctx.stroke();
-}
-connectDots();
-
-function connectDots2() {
-    ctx.strokeStyle = 'green';
-    ctx.moveTo(50,100);
-    ctx.lineTo(70,70);
-    ctx.lineTo(80, 90);
-    ctx.lineTo(90,90);
-    ctx.lineTo(100,70);
-    ctx.lineTo(120,100);
-    ctx.lineTo(85,130);
-    ctx.lineTo(50,100);
+    ctx.beginPath();
+    ctx.moveTo(dots[0][0], dots[0][1])
+    for (let i: number = 0; i < dots.length; i++) {
+        ctx.lineTo(dots[i][0], dots[i][1]);
+    }
+    ctx.closePath();
     ctx.stroke();
 }
 
-connectDots2();
+connectDots(PointsToConnect);
+connectDots(PointsToConnect2);
+
+//why is it not working wtf
