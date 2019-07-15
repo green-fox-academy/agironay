@@ -19,7 +19,7 @@ const averageJoe: Person = new Person('John', 25, 180, 'sad');
 averageJoe.askMeHowIam();
 console.log('this is Joe');
 averageJoe.socialize();
-//polymorphism ↨
+//polymorphism ↨ overriding!
 const sandor: GreenFoxStudent = new GreenFoxStudent('Sandor', 25, 185, 'eksandor', 'good');
 sandor.socialize();
 
