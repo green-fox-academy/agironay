@@ -27,11 +27,11 @@ class Garden {
 
             if (flowers[i].waterLevel < 5) {
                 console.log('The ', flowers[i].color, 'flower needs more water!')
-                newWaterLevelFlo += (flowers[i].waterLevel * 0, 75);
+                newWaterLevelFlo += (flowers[i].waterLevel * 0,75);
                 console.log(newWaterLevelFlo)
             } else if (trees[i].waterLevel < 10) {
                 console.log('The ', trees[i].color, 'tree needs more water!')
-                newWaterLevelTree += trees[i].waterLevel * 0, 4;
+                newWaterLevelTree += trees[i].waterLevel * 0,4;
                 console.log(newWaterLevelTree)
             }
         }
