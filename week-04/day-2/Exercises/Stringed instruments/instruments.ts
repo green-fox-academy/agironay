@@ -18,8 +18,8 @@ abstract class StringedInstrument extends Instrument {
 }
 
 class ElectricGuitar extends StringedInstrument {
-    constructor(name: string, numberOfStrings: number = 6) {
-        super(name, numberOfStrings)
+    constructor(numberOfStrings: number = 6) {
+        super('Electric Guitar', numberOfStrings)
     }
     sound(): string {
         return 'Twang';
@@ -30,8 +30,8 @@ class ElectricGuitar extends StringedInstrument {
 }
 
 class BassGuitar extends StringedInstrument {
-    constructor(name: string, numberOfStrings: number = 4) {
-        super(name, numberOfStrings)
+    constructor(numberOfStrings: number = 4) {
+        super('Bass Guitar', numberOfStrings)
     }
     sound(): string {
         return 'Duum-duum-duum';
@@ -42,8 +42,8 @@ class BassGuitar extends StringedInstrument {
 }
 
 class Violin extends StringedInstrument {
-    constructor(name: string, numberOfStrings: number = 4) {
-        super(name, numberOfStrings)
+    constructor(numberOfStrings: number = 4) {
+        super('Violin', numberOfStrings)
     }
     sound(): string {
         return 'Screech';
@@ -53,14 +53,4 @@ class Violin extends StringedInstrument {
     }
 }
 
-
-
-console.log('Test 1');
-let guitar = new ElectricGuitar('Electric Guitar');
-let bassGuitar = new BassGuitar('Bass Guitar');
-let violin = new Violin('Violin');
-
-guitar.play();
-bassGuitar.play();
-violin.play();
-
+export {ElectricGuitar, BassGuitar, Violin};
