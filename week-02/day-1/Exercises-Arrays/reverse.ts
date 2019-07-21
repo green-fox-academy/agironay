@@ -7,13 +7,12 @@
 
 'use strict;'
 //with built in method
-let numList= [3, 4, 5, 6, 7].reverse();
-console.log(numList);
+let numList: number[]= [3, 4, 5, 6, 7];
 
 //with new array + loop
-let numList2 = [3, 4, 5, 6, 7];
-for (let i: number = 0; i < numList2.length; i++) {
-    let newList = 0;
-    newList = numList2[i];
-    //console.log(newList);
+let emptyNumList: number[] =[];
+for (let i: number = 0; i < numList.length; i++) {
+    emptyNumList[i] = numList[numList.length - i - 1];
 }
+console.log(emptyNumList);
+console.log(numList.reverse());
