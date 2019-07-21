@@ -5,6 +5,6 @@
 
 let abc = ["Arthur", "Boe", "Chloe"];
 
-console.log([abc[0], abc[1], abc[2]] = [abc[2], abc[1], abc[0]]);
+//console.log([abc[0], abc[1], abc[2]] = [abc[2], abc[1], abc[0]]);
 
-//console.log(abc.reverse()); works now
+console.log(abc.reverse())
