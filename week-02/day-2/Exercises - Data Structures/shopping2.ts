@@ -66,11 +66,26 @@ if (BobsList.get('Potato') > AlicesList.get('Potato')) {
 }
 
 if (AlicesList.size > BobsList.size) {
-    console.log('Alice buys more products');
+    console.log('Alice buys more different kinds of products');
 }
 else if (AlicesList.size == BobsList.size) {
-    console.log('They buy equal different amounts of products');
+    console.log('They buy equal different kinds of products');
 }
 else {
     console.log('Bob buys more different kinds of products');
+}
+
+
+/* function countProducts (values: number):number{
+    return AlicesList.keys()
+} */
+
+if (AlicesList.size > BobsList.size) {
+    console.log('Alice buys more products');
+}
+else if (AlicesList.size == BobsList.size) {
+    console.log('They buy equal number of products');
+}
+else {
+    console.log('Bob buys more products');
 }
