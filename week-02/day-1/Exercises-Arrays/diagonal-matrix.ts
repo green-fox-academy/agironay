@@ -20,10 +20,10 @@ let matrix: number[][] = [
 ];
 
 let size: number = 4;
-for (let index = 0; index < size; index++) {
+for (let i = 0; i < size; i++) {
   let row: number[] = [];
   for (let inner: number = 0; inner < size; inner++) {
-    if (size - inner - 1 === index) {
+    if (size - inner - 1 === i) {
       row.push(1);
     } else {
       row.push(0);
