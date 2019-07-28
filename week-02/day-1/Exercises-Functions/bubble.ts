@@ -4,22 +4,17 @@
 //  Returns a list where the elements are sorted in ascending numerical order
 //  Make a second boolean parameter, if it's `true` sort that list descending
 
-function numAsc (myNums: number[]): number[]{
-    myNums.sort();
-    /* let uniqueNums: number[] = [];
-    myNums.forEach(function(item) {
+function numAsc(myNums: number[]): number[] {
+    let uniqueNums: number[] = [];
+    myNums.forEach(function (item) {
         if (uniqueNums.indexOf(item) < 0) {
             uniqueNums.push(item);
+            uniqueNums.sort();
         }
     })
-    return uniqueNums; */
+    return uniqueNums;
 }
 console.log(numAsc([3, 12, 21, 8, 14, 14, 25, 15, 8, 15, 34]));
-
-
-
-
-
 
 //  Example:
 //console.log(bubble([34, 12, 24, 9, 5]));
