@@ -7,10 +7,12 @@ class Pirate {
     isCaptain: boolean;
     hasWoodenLeg: boolean;
 
-    constructor(name: string, gold: number, hp: number = 10, isCaptain?: boolean, hasWoodenLeg?: boolean){
+    constructor(name: string, gold: number, hp: number = 10, isCaptain: boolean, hasWoodenLeg: boolean){
         this.name = name;
         this.gold = gold;
         this.hp = hp;
+        this.isCaptain = isCaptain;
+        this.hasWoodenLeg = hasWoodenLeg;
     }
 
     work(): void{
@@ -40,10 +42,5 @@ class Pirate {
     }
 
 }
-
-let jack: Pirate = new Pirate ('Jack', 15, 10, true, false)
-let rose: Pirate = new Pirate ('Rose', 150, 14, false, false)
-let orli: Pirate = new Pirate ('Orlando Bloom', 70, 14, false, false)
-let spongebob:Pirate = new Pirate ('Sponge Bob', 700, 25, true, false)
 
 export default Pirate;
