@@ -41,4 +41,9 @@ class Pirate {
 
 }
 
+let jack: Pirate = new Pirate ('Jack', 15, 10, true, false)
+let rose: Pirate = new Pirate ('Rose', 150, 14, false, false)
+let orli: Pirate = new Pirate ('Orlando Bloom', 70, 14, false, false)
+let spongebob:Pirate = new Pirate ('Sponge Bob', 700, 25, true, false)
+
 export default Pirate;
