@@ -34,7 +34,7 @@ class Pirate {
     }
 
     toString (): string{
-        if (this.hasWoodenLeg == true){
+        if (this.hasWoodenLeg){
             return `Hello, I'm ${this.name}. I have a wooden leg and ${this.gold} golds.`
         } else {
             return `Hello, I'm ${this.name}. I still have my real legs and ${this.gold} golds.`
