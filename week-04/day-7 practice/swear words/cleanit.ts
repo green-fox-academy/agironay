@@ -13,16 +13,18 @@ const fs = require("fs");
 let fileContent = fs.readFileSync("./badwords.txt", "utf-8");
 //console.log(fileContent);
 
-let lowerCaseWords: string[] = fileContent.toString().toLowerCase().split(" ");
-//console.log(lowerCaseWords)
+let lowerCaseWords: string[] = fileContent.toString().toLowerCase().split(' ');
+let lowerCaseWordsWithoutChars: string []= lowerCaseWords.toString().replace(/\./gi,'').split(',');
+//console.log(lowerCaseWords);
+//console.log(lowerCaseWordsWithoutChars);
 
 for (let i: number = 0; i < lowerCaseWords.length; i++) {
   for (let j: number = 0; j < badWords.length; j++) {
     let collectMatchingBadWords: string[] = [];
-    if (lowerCaseWords[i] !== badWords[j]) {
+    if (lowerCaseWordsWithoutChars[i] !== badWords[j]) {
       continue;
-    } else if (lowerCaseWords[i] == badWords[j]){
-      collectMatchingBadWords.push(lowerCaseWords[i]);
+    } else if (lowerCaseWordsWithoutChars[i] == badWords[j]) {
+      collectMatchingBadWords.push(lowerCaseWordsWithoutChars[i]);
     }
     console.log(collectMatchingBadWords);
   }
