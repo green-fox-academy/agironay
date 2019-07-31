@@ -14,18 +14,19 @@ let fileContent = fs.readFileSync("./badwords.txt", "utf-8");
 //console.log(fileContent);
 
 let lowerCaseWords: string[] = fileContent.toString().toLowerCase().split(' ');
-let lowerCaseWordsWithoutChars: string []= lowerCaseWords.toString().replace(/\./gi,'').split(',');
+let lowerCaseWordsWithoutChars: string[] = lowerCaseWords.toString().replace(/\./gi, '').split(',');
 //console.log(lowerCaseWords);
 //console.log(lowerCaseWordsWithoutChars);
 
+
+let collectMatchingBadWords: string[] = [];
 for (let i: number = 0; i < lowerCaseWords.length; i++) {
   for (let j: number = 0; j < badWords.length; j++) {
-    let collectMatchingBadWords: string[] = [];
     if (lowerCaseWordsWithoutChars[i] !== badWords[j]) {
       continue;
     } else if (lowerCaseWordsWithoutChars[i] == badWords[j]) {
       collectMatchingBadWords.push(lowerCaseWordsWithoutChars[i]);
     }
-    console.log(collectMatchingBadWords);
   }
 }
+console.log(collectMatchingBadWords.length);
