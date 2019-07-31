@@ -1,8 +1,8 @@
 'use strict'
 
-export function healingCost(upto: number, min: number): number {
+/* export function healingCost(upto: number, min: number): number {
     return Math.floor(Math.random() * (upto - min + 1) + min);
-}
+} */
 
 class Animal {
     ownerName: string;
@@ -15,7 +15,7 @@ class Animal {
         this.healCost = healCost;
     }
 
-    heal() {
+    heal():void {
         this.isHealthy == true;
     }
 
@@ -29,11 +29,17 @@ class Animal {
 
     toString():string {
         if (!this.isAdoptable) {
-            return `${this.name} is not healthy (${this.healCost}€, and not adoptable)`
+            return `${Animal.name} is not healthy (${this.healCost}€, and not adoptable)`
         } else {
-            return `${this.name} is healthy and adoptable!`
+            return `${Animal.name} is healthy and adoptable!`
         }
     }
+
+    healingCost(upto: number, min: number): number {
+        return Math.floor(Math.random() * (upto - min + 1) + min);
+    }
+
+
 }
 
 export default Animal;

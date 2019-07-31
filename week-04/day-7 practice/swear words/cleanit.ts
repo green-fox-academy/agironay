@@ -26,7 +26,9 @@ for (let i: number = 0; i < lowerCaseWords.length; i++) {
       continue;
     } else if (lowerCaseWordsWithoutChars[i] == badWords[j]) {
       collectMatchingBadWords.push(lowerCaseWordsWithoutChars[i]);
+      lowerCaseWordsWithoutChars[i] = '';
     }
   }
 }
 console.log(collectMatchingBadWords.length);
+console.log(collectMatchingBadWords);
