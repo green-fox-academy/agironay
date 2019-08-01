@@ -37,4 +37,8 @@ function multiplyRowItems(matrix: number[][]): number[][] {
   return matrix;
 }
 
+
 console.log(multiplyRowItems([[1, 3, 6, 2], [7, 5, 6, 1], [3, 3, 1, 5], [9, 0, 5, 3]]));
+console.log(multiplyRowItems([[1,2],[1,2]]));
+
+export { multiplyRowItems };
