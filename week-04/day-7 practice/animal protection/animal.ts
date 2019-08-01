@@ -34,8 +34,3 @@ class Animal {
 }
 
 export default Animal;
-
-/* export function healingCost(upto: number, min: number): number {
-    return Math.floor(Math.random() * (upto - min + 1) + min);
-} */
-
