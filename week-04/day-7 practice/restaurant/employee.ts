@@ -30,8 +30,8 @@ class Waiter extends Employee {
 class Chef extends Employee {
     constructor(name: string, experience: number) {
         super(name, experience)
-        let meals = new Map();
-        meals.set('food',0)
+        //let meals = new Map();
+        //meals.set('food',0)
         
     }
     
@@ -40,11 +40,9 @@ class Chef extends Employee {
     }
     
     
-    cook(food: string): void {
+    /* cook(food: string): void {
         this.meals.set(food)
-        
-        
-    }
+    } */
 }
 
 class Manager extends Employee {
