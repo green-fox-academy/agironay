@@ -6,12 +6,12 @@ abstract class Employee {
     experience: number;
     tips: number;
     moodLevel: number;
-    
+
     constructor(name: string, experience: number = 0, tips?: number, moodLevel?: number) {
         this.name = name;
         this.experience = experience;
     }
-    
+
     abstract work()
 }
 
@@ -20,7 +20,7 @@ class Waiter extends Employee {
         super(name, experience)
         this.tips = tips;
     }
-    
+
     work() {
         this.tips++
         this.experience++
@@ -30,19 +30,21 @@ class Waiter extends Employee {
 class Chef extends Employee {
     constructor(name: string, experience: number) {
         super(name, experience)
-        //let meals = new Map();
-        //meals.set('food',0)
-        
+        meals = object = {};
+
     }
-    
+
     work() {
         this.experience++
     }
-    
-    
-    /* cook(food: string): void {
-        this.meals.set(food)
-    } */
+
+
+    meal(foodName: string): object {
+        if(this.meals[foodName]){
+
+        }
+        return
+        }
 }
 
 class Manager extends Employee {

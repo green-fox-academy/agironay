@@ -1,0 +1,17 @@
+file manipulation: https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/file-manipulations/ts.md
+
+classes: https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/oo/ts.md
+
+testing: https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/testing/ts.md
+
+saját done feladatok:
+
+class animals
+class pirates
+class restaurant
+
+matrix rotate
+matrix symmetric
+matrix multiply
+
+file reading ehhhhh

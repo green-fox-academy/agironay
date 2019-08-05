@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+  
+.item {
+    align-self: flex-end;
+}
+
+.item-purple {
+    background-color: #b02aff;
+    width: 25%;
+    height: 200px;
+}
+
+.item-yellow {
+    background-color: #ffd62a;
+    width: 50%;
+    height: 200px;
+}
+
+.item-green {
+    background-color: #51d400;
+    width: 25%;
+    height: 200px;
+}
+
+/* here the order of the colored items stays the same based on the html, but their order is reversed by the
+flex direction*/

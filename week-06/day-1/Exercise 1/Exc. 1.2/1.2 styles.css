@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+}
+  
+.item {
+    align-self: flex-end;
+}
+
+.item-purple {
+    background-color: #b02aff;
+    width: 25%;
+    height: 200px;
+}
+
+.item-yellow {
+    background-color: #ffd62a;
+    width: 50%;
+    height: 200px;
+}
+
+.item-green {
+    background-color: #51d400;
+    width: 25%;
+    height: 200px;
+}
+
+/*the colored items fill all available horizontal space 
+while the yellow item should be twice as big as the side items*/
