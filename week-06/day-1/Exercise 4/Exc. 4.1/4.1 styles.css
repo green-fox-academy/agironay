@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    background-color: #b02aff;
+    width: 75%;
+    height: 50px;
+}
+
+.navlinks {
+    list-style: none;
+    background-color: cyan;
+    height: 40px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.main-content{
+    background: yellow;
+    width: 50%;
+    height: 600px;
+}
+
+.sidebar {
+    background: green;
+    
+}
