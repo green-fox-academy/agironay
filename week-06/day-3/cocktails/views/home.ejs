@@ -9,11 +9,33 @@
 </head>
 
 <body>
-    <ul>
+    <h1>Cocktails</h1>
+
+    <% for (let i = 0; i < alcoholList.length; i++{ %>
+    <li><%=alcoholList.[i]%></li>
+    <%}%>
+
+    <!-- <table>
+        <tr>
+            <th>Name</th>
+            <th>Prices</th>
+
+        </tr>
+
+        <tr>
+            for (let i = 0; i < cocktails.length, i++){
+            <td>cocktails.name</td>
+            <td>cocktails.prices)</td>
+            }
+        </tr>
+    </table> -->
+
+    <!-- <ul>
         <% for (let i = 0; i < cocktails.length; i ++){ %>
-            <li><%=cocktails[i].name%></li>
-        <%}%>
-    </ul>
-    
+    <li><%=cocktails[i].name%></li>
+    <%}%>
+    </ul> -->
+
 </body>
+
 </html>

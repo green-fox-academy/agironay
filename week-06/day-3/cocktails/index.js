@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 3001;
 
+const alcoholList = ['gin', 'vodka', 'rum', 'tequila'];
 
 app.set('view engine', 'ejs')
 
@@ -17,15 +18,9 @@ app.get('/cocktails', (req, res) => {
             { name: 'VIRGIN MOJITO', price: 990, contains: ['sugar', 'lime juice', 'soda water'], isAlcoholic: false },
             { name: 'SAFE SEX ON THE BEACH', price: 990, contains: ['peach schnapps', 'orange juice', 'cranberry juice'], isAlcoholic: false },
         ]
-    })
-}
-);
-
-app.get('/alcohols', (req, res)=> {
-    res.render('home', {
-        alcoholList = ['gin', 'vodka', 'rum', 'tequila']
-    })
-})
+    }
+    )
+});
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
