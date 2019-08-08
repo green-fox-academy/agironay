@@ -10,3 +10,7 @@ th {
 td {
     width: auto;
 }
+
+tr:nth-child(even) {
+    background: #CCC
+}
