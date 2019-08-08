@@ -13,7 +13,11 @@
     <h1>Cocktails</h1>
 
     <div class='nav'>
-        <a href=''></a>
+        <a href=''>ALL</a>
+        <a href=''>GIN</a>
+        <a href=''>VODKA</a>
+        <a href=''>RUM</a>
+        <a href=''>TEQUILA</a>
     </div>
 
     <table>
@@ -24,8 +28,8 @@
 
         <% for(let i=0; i < cocktails.length; i++) { %>
         <tr>
-            <td><%= cocktails[i].name%><br><%= cocktails[i].name %></td>
-            <td><%= cocktails[i].price+' Ft' %></td>
+            <td><%=cocktails[i].name%><br><%= cocktails[i].content %></td>
+            <td align="center"><%= cocktails[i].price+' Ft' %></td>
         </tr>
         <% } %>
 

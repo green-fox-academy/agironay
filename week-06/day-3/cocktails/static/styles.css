@@ -1,16 +1,33 @@
 * {
     font-family: 'Trebuchet MS';
+    align-self: center;
+
+}
+
+table {
+    align-content: center;
+    justify-content: center;
+}
+
+.nav:hover {
+    font-weight: bold;
 }
 
 th {
     background-color: black;
     color: white;
-}
-
-td {
-    width: auto;
+    height: 40px;
 }
 
 tr:nth-child(even) {
     background: #CCC
+}
+
+tr :nth-child(odd) {
+    width: 500px;
+    font-weight: bold;
+}
+
+tr :nth-child(even) {
+    width: 150px;
 }
