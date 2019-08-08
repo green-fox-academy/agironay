@@ -6,35 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Yum yum cocktails!</title>
+    <link rel="stylesheet" href='static/styles.css' type='text/css'>
 </head>
 
 <body>
     <h1>Cocktails</h1>
 
-    <% for (let i = 0; i < alcoholList.length; i++{ %>
-    <li><%=alcoholList.[i]%></li>
-    <%}%>
+    <div class='nav'>
+        <a href=''></a>
+    </div>
 
-    <!-- <table>
+    <table>
         <tr>
-            <th>Name</th>
-            <th>Prices</th>
-
+            <th>NAME</th>
+            <th>PRICE</th>
         </tr>
 
+        <% for(let i=0; i < cocktails.length; i++) { %>
         <tr>
-            for (let i = 0; i < cocktails.length, i++){
-            <td>cocktails.name</td>
-            <td>cocktails.prices)</td>
-            }
+            <td><%= cocktails[i].name%><br><%= cocktails[i].name %></td>
+            <td><%= cocktails[i].price+' Ft' %></td>
         </tr>
-    </table> -->
+        <% } %>
 
-    <!-- <ul>
-        <% for (let i = 0; i < cocktails.length; i ++){ %>
-    <li><%=cocktails[i].name%></li>
-    <%}%>
-    </ul> -->
+    </table>
 
 </body>
 
