@@ -2,17 +2,28 @@
     font-family: 'Trebuchet MS';
 }
 
-/* body {
+body {
     display: flex;
-} */
+    justify-content: center;
+}
+
+h1{
+    font-family: Verdana;
+}
 
 
 /* .dropdown {
     background-color: #CCC;
     font-size: 16px;
     margin-left: 3px;
-    display: flex;;
+    display: flex;
 } */
+
+.links {
+    color: red;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 
 .cocktailname {
     font-weight: bold;
@@ -21,7 +32,7 @@
 .nonalc {
     font-weight: normal;
     font-size: 14px;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .ingredients {

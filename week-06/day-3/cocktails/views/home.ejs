@@ -10,9 +10,10 @@
 </head>
 
 <body>
-    <h1>Cocktails</h1>
+    <div class = 'container'>
+        <h1>🍹🍸Cocktails🍸🍹</h1>
 
-    <!-- <select class='dropdown'>
+        <!-- <select class='dropdown'>
         <option value=''><a href='http://localhost:3001'>ALL</a></option>
         <option value=''><a href='http://localhost:3001/?alcohol=gin'>GIN</a></option>
         <option value=''><a href='http://localhost:3001/?alcohol=vodka'>VODKA</a></option>
@@ -20,11 +21,11 @@
         <option value=''><a href='http://localhost:3001/?alcohol=tequila'>TEQUILA</a></option>
     </select> -->
 
-    <nav class = 'links'>
-        <a href='http://localhost:3001/?alcohol'>ALL</a>
-        <%for (let i = 0; i < alcoholList.length; i++){%>
+        <nav class='links'>
+            <a href='http://localhost:3001/?alcohol'>ALL</a>
+            <%for (let i = 0; i < alcoholList.length; i++){%>
             <a href='?alcohol=<%= alcoholList[i] %>'><%= alcoholList[i]  %></a>
-        <%}%>
+            <%}%>
     </nav>
 
     <table class='table'>
@@ -35,20 +36,21 @@
 
         <%if(alcoholCocktails.length !== 0){%>
             <% for(let i=0; i < alcoholCocktails.length; i++) { %>
-                <tr>
-                    <td>
-                        <p class='cocktailname'><%=alcoholCocktails[i].name%></p>
-                        <% if(alcoholCocktails[i].isAlcoholic === false) {%>
-                        <p class='nonalc'>(non-alcoholic)</p>
-                        <% }%>
-                        <p class='ingredients'><%=alcoholCocktails[i].contains%></p>
-                    </td>
-                    <td class='drinkprice' align="center"><%= alcoholCocktails[i].price+' Ft' %></td>
-                </tr>
+            <tr>
+                <td>
+                    <p class='cocktailname'><%=alcoholCocktails[i].name%></p>
+                    <% if(alcoholCocktails[i].isAlcoholic === false) {%>
+                    <p class='nonalc'>(non-alcoholic)</p>
+                    <% }%>
+                    <p class='ingredients'><%=alcoholCocktails[i].contains%></p>
+                </td>
+                <td class='drinkprice' align="center"><%= alcoholCocktails[i].price+' Ft' %></td>
+            </tr>
             <% } %>
-        <% } %>
+            <% } %>
 
-    </table>
+            </table>
+    </div>
 </body>
 
 </html>
