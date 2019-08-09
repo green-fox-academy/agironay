@@ -13,30 +13,34 @@
     <h1>Cocktails</h1>
 
     <select class='dropdown'>
-        <option value=''><a href=''>ALL</a></option>
-        <option value=''><a href='http://localhost:3001/alcohol?=gin'>GIN</a></option>
-        <option value=''><a href=''>VODKA</a></option>
-        <option value=''><a href=''>RUM</a></option>
-        <option value=''><a href=''>TEQUILA</a></option>
+        <option value=''><a href='http://localhost:3001'>ALL</a></option>
+        <option value=''><a href='http://localhost:3001/?alcohol=gin'>GIN</a></option>
+        <option value=''><a href='http://localhost:3001/?alcohol=vodka'>VODKA</a></option>
+        <option value=''><a href='http://localhost:3001/?alcohol=rum'>RUM</a></option>
+        <option value=''><a href='http://localhost:3001/?alcohol=tequila'>TEQUILA</a></option>
     </select>
 
-    <table class = 'table'>
+    
+
+    <table class='table'>
         <tr>
             <th>NAME</th>
             <th>PRICE</th>
         </tr>
 
-        <% for(let i=0; i < cocktails.length; i++) { %>
-        <tr>
-            <td>
-                <p class='cocktailname'><%=cocktails[i].name%></p>
-                <% if(cocktails[i].isAlcoholic === false) {%>
-                <p class='nonalc'>(non-alcoholic)</p>
-                <% }%>
-                <p class='ingredients'><%=cocktails[i].contains%></p>
-            </td>
-            <td class='drinkprice' align="center"><%= cocktails[i].price+' Ft' %></td>
-        </tr>
+        <%if(alcoholCocktails.length !== 0){%>
+            <% for(let i=0; i < alcoholCocktails.length; i++) { %>
+                <tr>
+                    <td>
+                        <p class='cocktailname'><%=alcoholCocktails[i].name%></p>
+                        <% if(alcoholCocktails[i].isAlcoholic === false) {%>
+                        <p class='nonalc'>(non-alcoholic)</p>
+                        <% }%>
+                        <p class='ingredients'><%=alcoholCocktails[i].contains%></p>
+                    </td>
+                    <td class='drinkprice' align="center"><%= alcoholCocktails[i].price+' Ft' %></td>
+                </tr>
+            <% } %>
         <% } %>
 
     </table>
