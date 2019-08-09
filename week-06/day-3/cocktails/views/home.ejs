@@ -22,10 +22,9 @@
 
     <nav class = 'links'>
         <a href='http://localhost:3001/?alcohol'>ALL</a>
-        <a href='http://localhost:3001/?alcohol=gin'>GIN</a>
-        <a href='http://localhost:3001/?alcohol=vodka'>VODKA</a>
-        <a href='http://localhost:3001/?alcohol=rum'>RUM</a>
-        <a href='http://localhost:3001/?alcohol=tequila'>TEQUILA</a>
+        <%for (let i = 0; i < alcoholList.length; i++){%>
+            <a href='?alcohol=<%= alcoholList[i] %>'><%= alcoholList[i]  %></a>
+        <%}%>
     </nav>
 
     <table class='table'>

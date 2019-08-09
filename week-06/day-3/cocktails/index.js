@@ -25,6 +25,7 @@ app.get('/', (req, res) => {
         res.render('home', {
             cocktails: cocktails,
             alcoholCocktails: cocktails,
+            alcoholList: alcoholList,
         });
     } else {
         let listOfAlcoholicDrinks = [];
@@ -35,6 +36,7 @@ app.get('/', (req, res) => {
         res.render('home', {
             cocktails: cocktails,
             alcoholCocktails: listOfAlcoholicDrinks,
+            alcoholList: alcoholList,
         })
     }
 });
