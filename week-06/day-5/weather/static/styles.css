@@ -1,0 +1,35 @@
+.body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(236,240,241)
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('https://fonts.googleapis.com/css?family=Lato:400,900');
+  }
+
+.table {
+    font-family: 'Lato Regular';
+    color: rgb(52,73,94);
+    font-weight: bold;
+    width: auto;
+}
+
+.cities {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.location {
+    font-size: 14px;
+}
+
+.celcius {
+    font-size: 40px;
+    justify-content: flex-end;
+}
+
+.image {
+    width: 100px;
+}

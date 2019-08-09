@@ -4,5 +4,5 @@ Make the link point to the Green Fox Academy website.
 Disable the second button.
 Replace its text with 'Don't click me!'. */
 
-const getPicURL = document.querySelector('img');
-console.log(getPicURL)
+const faveAnimalURL = document.querySelector('img');
+console.log(faveAnimalURL)
