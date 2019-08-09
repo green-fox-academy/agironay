@@ -21,17 +21,22 @@ const cocktails = [
 /*with /?alcohol={alcholType} route (for example /?alcohol=gin), filter the cocktails and pass only these that contains the selected alcohol*/
 
 app.get('/', (req, res) => {
-
-    let listOfAlcoholicDrinks = [];
-    for (let i = 0; i < cocktails.length; i++) {
-        if (cocktails[i].contains.includes(req.query.alcohol))
-            listOfAlcoholicDrinks.push(cocktails[i])
+    if (req.query.alcohol == '') {
+        res.render('home', {
+            cocktails: cocktails,
+            alcoholCocktails: cocktails,
+        });
+    } else {
+        let listOfAlcoholicDrinks = [];
+        for (let i = 0; i < cocktails.length; i++) {
+            if (cocktails[i].contains.includes(req.query.alcohol))
+                listOfAlcoholicDrinks.push(cocktails[i])
+        }
+        res.render('home', {
+            cocktails: cocktails,
+            alcoholCocktails: listOfAlcoholicDrinks,
+        })
     }
-    //console.log(listOfAlcoholicDrinks)
-    res.render('home', {
-        cocktails: cocktails,
-        alcoholCocktails: listOfAlcoholicDrinks,
-    })
 });
 
 app.listen(PORT, () => {
