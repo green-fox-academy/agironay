@@ -37,20 +37,3 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
-
-
-/* app.get('/', (req, res) => {
-
-
-    let listOfAlcoholicDrinks = [];
-    for (let i = 0; i < cocktails.length; i++) {
-        for (let j = 0; j < alcoholList.length; j++) {
-            if (cocktails[i].contains.includes(alcoholList[j]))
-                listOfAlcoholicDrinks.push(cocktails[i])
-        }
-    }
-    res.render('home', {
-        cocktails: cocktails,
-        alcoholCocktails: listOfAlcoholicDrinks,
-    })
-}); */

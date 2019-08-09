@@ -1,26 +1,18 @@
 * {
     font-family: 'Trebuchet MS';
-    align-self: center;
 }
 
 /* body {
     display: flex;
 } */
 
-/* .nav:hover {
-    font-weight: bold;
-} */
 
-h1 {
-    position: relative;
-}
-
-.dropdown {
+/* .dropdown {
     background-color: #CCC;
     font-size: 16px;
     margin-left: 3px;
     display: flex;;
-}
+} */
 
 .cocktailname {
     font-weight: bold;
