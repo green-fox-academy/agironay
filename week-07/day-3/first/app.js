@@ -39,7 +39,21 @@ app.get('/greeter', (req, res) => {
     res.status(200);
 })
 
+app.get('/appenda/:text', (req, res) => {
+    if (req.params.text !== undefined) {
+        res.send({ appended: `${req.params.text}a` })
+    }
+})
 
+
+/* app.post('/dountil/:action', (req, res) => {
+    function sumNum(){
+
+    }
+    if (req.params.action == sum) {
+        res.send({until: `${req.params.action}`})
+    }
+}) */
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
