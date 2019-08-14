@@ -48,7 +48,7 @@ app.get('/appenda/:text', (req, res) => {
 
 function numSum(upto) {
     let total = 0;
-    for (let i = 1; i <= upto; i++) {
+    for (let i = 0; i <= upto; i++) {
         total += i;
     }
     return total
@@ -66,13 +66,15 @@ function numFact(uptil) {
 //console.log(numFact(5));
 
 app.post('/dountil/:action', (req, res) => {
-    if (req.params.action == sum) {
-        res.send({ until: `${req.params.numSum}` })
-    } else if (req.params.action == factor){
-        res.send({until: `${req.params.numFact}`})
+    let output = {};
+    if (req.params.action == 'sum') {
+        output = {result: numSum(req.body.dountil)};
+    } else if (req.params.action == 'factor'){
+        output = {result: numFact(req.body.until)};
     } else {
-        
+        output = {error: `Please provide a number!`}
     }
+    res.send(output);
 })
 
 app.listen(PORT, () => {
