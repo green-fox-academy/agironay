@@ -22,14 +22,4 @@ function countDownSeconds() {
     setTimeout(() => {
     }, 2000)
 }
-countDownSeconds();
-
-
-/* let countFrom = 10;
-function countDown(countFrom) {
-    for (let i = 0; i < countDown; i--){
-        console.log(bomb.textContent = countFrom[i])
-    }
-}
-
-countDown(10); */
+countDownSeconds()
