@@ -12,22 +12,23 @@
 
 <body>
     <h1>Overview</h1>
-    <div class = 'dashboard'>
+    <div class='dashboard'>
         <table class='table'>
+            <%for (let i = 0; i < forecasts.length; i++){%>
             <tr>
                 <td>
-                    <p class='cities'>Seattle</p>
-                    <p class='location'>Washington, United States</p>
+                    <p class='cities'><%=forecasts[i].city%></p>
+                    <p class='location'><%=forecasts[i].location%></p>
                 </td>
 
                 <td>
-                    <p class='celcius'>11°C</p>
+                    <p class='celcius'><%=forecasts[i].weather[0].temp%>°C</p>
                 </td>
 
                 <td>
-                    <img class='image' src='../static/pics/cloudy.png'>
+                    <img class='image' src='../static/pics/ <%forecasts[i].weather[0].icon%>.png'>
                 </td>
-
+                <%}%>
             </tr>
         </table>
     </div>

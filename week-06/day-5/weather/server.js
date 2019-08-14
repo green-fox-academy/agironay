@@ -64,8 +64,7 @@ const forecasts = [
 ];
 
 app.get('/', (req, res) => {
-    res.render('home', {
-  })
+  res.render('home', { forecasts: forecasts });
 });
 
 app.listen(PORT, () => {
