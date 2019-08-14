@@ -46,14 +46,34 @@ app.get('/appenda/:text', (req, res) => {
 })
 
 
-/* app.post('/dountil/:action', (req, res) => {
-    function sumNum(){
+function numSum(upto) {
+    let total = 0;
+    for (let i = 1; i <= upto; i++) {
+        total += i;
+    }
+    return total
+}
 
+//console.log(numSum(5));
+
+function numFact(uptil) {
+    let total = 1;
+    for (let i = 1; i <= uptil; i++) {
+        total = total * i;
     }
+    return total
+}
+//console.log(numFact(5));
+
+app.post('/dountil/:action', (req, res) => {
     if (req.params.action == sum) {
-        res.send({until: `${req.params.action}`})
+        res.send({ until: `${req.params.numSum}` })
+    } else if (req.params.action == factor){
+        res.send({until: `${req.params.numFact}`})
+    } else {
+        
     }
-}) */
+})
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
