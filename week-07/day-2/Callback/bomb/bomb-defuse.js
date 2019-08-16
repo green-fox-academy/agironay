@@ -1,25 +1,24 @@
 'use strict';
 let bomb = document.querySelector('div');
 
-const bombExpl = setTimeout(() => {
+/* let bombExpl = setTimeout(() => {
     bomb.textContent = '💣Bomb exploded!💣';
-}, 3000);
+}, 10000) */
+
+let counter = 10;
+let countDownSeconds = setInterval(function () {
+    counter--;
+    document.getElementById("display").innerHTML = counter;
+    if (counter <= 0) {
+        bomb.textContent = '💣Bomb exploded!💣';
+    }
+}, 1000);
 
 
 let buttonChanger = document.querySelector('button');
 buttonChanger.addEventListener('click', function () {
     buttonChanger.innerHTML = 'DEFUSED';
     bomb.textContent = '😊'
-    clearTimeout(bombExpl);
-});
+    clearInterval(countDownSeconds);
 
-let counter = 10;
-function countDownSeconds() {
-    for (let i = 10; i > 0; i--) {
-        console.log(i)
-        bomb.textContent[i];
-    }
-    setTimeout(() => {
-    }, 2000)
-}
-countDownSeconds()
+});
