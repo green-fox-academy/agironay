@@ -1,35 +1,59 @@
+body {
+    margin: auto;
+}
+
 .container {
     display: flex;
+    height: 700px;
+    justify-content: center;
+    
 }
 
 .main-content {
     background-color: yellow;
-    flex-grow:2;
-    display: block;
-    height: 700px;
+    height: 650px;
     width: 400px;
+    position: absolute;
 }
 
 .sidebar {
     background-color: green;
-    flex-grow: 1;
     width: 300px;
+    height: 650px;
+    position: absolute;
 }
 
 .header{
-    margin: 0;
     background-color: purple;
-    height: 50px;
-    list-style-type: none;
-    flex-grow: 1;
+    height: 60px;
     width: 700px;
-    display: block;
+    position: fixed;
 }
 
-.link {
+.navbar {
     background-color: cyan;
+    list-style-type: none;
+    margin-top: 15px;
+    height: 30px;
+    position: relative;
+}
+
+.link1 {
     width: 60px;
-    height: 40px;
-    display: inline-block;
-    margin: 5px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+
+.link2 {
+    width: 40px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+
+.link3 {
+    width: 70px;
+    height: 30px;
+    margin-right: 20px;
 }

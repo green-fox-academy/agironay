@@ -39,9 +39,11 @@ app.get('/greeter', (req, res) => {
     res.status(200);
 })
 
-app.get('/appenda/:text', (req, res) => {
-    if (req.params.text !== undefined) {
-        res.send({ appended: `${req.params.text}a` })
+app.get('/appenda/:appendable', (req, res) => {
+    if (req.params.appendable !== undefined) {
+        res.send({ 'appended': req.params.appendable + 'a' })
+    } else if (req.params.appendable == undefined) {
+        res.status(404);
     }
 })
 
@@ -68,11 +70,15 @@ function numFact(uptil) {
 app.post('/dountil/:action', (req, res) => {
     let output = {};
     if (req.params.action == 'sum') {
-        output = {result: numSum(req.body.dountil)};
-    } else if (req.params.action == 'factor'){
-        output = {result: numFact(req.body.until)};
+        res.json({
+            'result': numSum(req.body.until)
+        });
+    } else if (req.params.action == 'factor') {
+        res.json({
+            'result': numFact(req.body.until)
+        });
     } else {
-        output = {error: `Please provide a number!`}
+        output = { error: `Please provide a number!` }
     }
     res.send(output);
 })
