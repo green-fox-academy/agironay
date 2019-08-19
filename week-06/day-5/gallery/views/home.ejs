@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My gallery</title>
+    <link rel="stylesheet" href='/static/styles.css' type='text/css'>
+</head>
+
+<body>
+    <!-- <h1>Agi's gallery</h1> -->
+    <div class='viewer'>
+        <div><button class='arrows'>
+                <img class='arrow1' src='./static/arrow.svg'>
+        </div>
+        <div>
+            <button class='arrows2'>
+                <img class='arrow2' src='./static/arrow.svg'>
+        </div>
+        <div class='description'>
+            <div class=table>
+                <tr>
+                    <th>
+                        <h2>Title</h2>
+                    </th>
+                    <td>
+                        <p>Description</p>
+                    </td>
+                </tr>
+            </div>
+
+        </div>
+        <div class='bigpic'></div>
+        <!-- <div class='bigpic'><img src='../static/pics/cat1.jpg' height='400px' width ='900px'></div> -->
+    </div>
+    <div class='thumbnails'>
+        <ul class='lilpics'>
+            <li class='pic'></li>
+            <li class='pic'></li>
+            <li class='pic'></li>
+            <li class='pic'></li>
+            <li class='pic'></li>
+            <li class='pic'></li>
+            <li class='pic'></li>
+            <li class='pic'></li>
+        </ul>
+    </div>
+    <script src='../server.js'></script>
+    <script src='../app.js'></script>
+</body>
+
+</html>
