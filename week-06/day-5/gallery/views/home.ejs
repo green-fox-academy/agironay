@@ -14,40 +14,28 @@
     <div class='viewer'>
         <div><button class='arrows'>
                 <img class='arrow1' src='./static/arrow.svg'>
-        </div>
-        <div>
-            <button class='arrows2'>
-                <img class='arrow2' src='./static/arrow.svg'>
+                <button class='arrows2'>
+                    <img class='arrow2' src='./static/arrow.svg'>
         </div>
         <div class='description'>
             <div class=table>
                 <tr>
                     <th>
-                        <h2>Title</h2>
+                        <h2 class = 'pictitle'><%=myPix[0].title%></h2>
                     </th>
                     <td>
-                        <p>Description</p>
+                        <p class = 'pictext'><%=myPix[0].descriptiontext%></p>
                     </td>
                 </tr>
             </div>
-
         </div>
-        <div class='bigpic'></div>
-        <!-- <div class='bigpic'><img src='../static/pics/cat1.jpg' height='400px' width ='900px'></div> -->
+        <div class='bigpic'><img src=<%= myPix[0].url%> height='400px' width ='900px'></div>
     </div>
     <div class='thumbnails'>
-        <ul class='lilpics'>
-            <li class='pic'></li>
-            <li class='pic'></li>
-            <li class='pic'></li>
-            <li class='pic'></li>
-            <li class='pic'></li>
-            <li class='pic'></li>
-            <li class='pic'></li>
-            <li class='pic'></li>
-        </ul>
+            <% for (let i = 0; i < myPix.length; i++){%>
+            <div class='pic'><img src=<%= myPix[i].url%> height='60px' width = '60px'></div>
+            <% } %>
     </div>
-    <script src='../server.js'></script>
     <script src='../app.js'></script>
 </body>
 
