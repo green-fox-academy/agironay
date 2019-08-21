@@ -11,43 +11,34 @@ let myPix = [
     { url: '../static/pics/8.jpg', title: 'Kjeragbolten', descriptiontext: 'Rock stuck between two rocks.' },
 ];
 
-let leftButton = document.getElementsByClassName('.arrows');
-let title = document.getElementsByClassName('.pictitle')
-let text = document.getElementsByClassName('.pictext')
+let title = document.querySelector('.pictitle');
+let text = document.querySelector('.pictext');
 
 
 function selectPic(){
     const mainImage = document.querySelector('.mainpic');
     const thumbnails = document.querySelectorAll('.lilpic')
-
+    
     thumbnails.forEach(thumbs =>{
         thumbs.addEventListener('click', function(){
-            const picNum = thumbs.src
+            let picNum = thumbs.src
             let index = picNum.charAt(34);
-            mainImage.src = myPix[index-1].url;
-             
+            mainImage.src = myPix[index-1].url
+            title.innerHTML = myPix[index-1].title;
+            text.innerHTML = myPix[index-1].descriptiontext;
         })
     })
 }
 
 selectPic();
 
+let leftButton = document.getElementsByClassName('.arrows');
+let rightButton = document.getElementsByClassName('.arrows2');
+
 /* rightButton.onclick = () => {
-    nextPic();
-} */
-
-/* let LastPic = document.querySelector('.bigpic') = myPix[7].url;
-let startingSmallPic = document.querySelector('.pic') = myPix[0].url;
-let LastSmallPic = document.querySelector('.pic') = myPix[7].url; */
-/*
-function toTheRight() {
-
-}
-
-
-
-function switchTitleDescription() {
-    for (let i = 0; i < myPix.length; i++) {
+    let mainImage = document.querySelector('.mainpic');
+    for (let i = 0; i < myPix.length; i++){
 
     }
-} */
+}
+ */
