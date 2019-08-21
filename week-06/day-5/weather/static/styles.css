@@ -1,20 +1,35 @@
 .body {
     display: flex;
     justify-content: center;
-    background-color: rgb(236,240,241)
+    /* background-color: rgb(236,240,241); */
 }
 
 @font-face {
     font-family: 'Lato';
     src: url('https://fonts.googleapis.com/css?family=Lato:400,900');
-  }
+}
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    background: rgb(236,240,241);
+}
 
 .table {
+    display: flex;
     font-family: 'Lato Regular';
     color: rgb(52,73,94);
     font-weight: bold;
     width: auto;
+    background-color: white;
+    border-collapse: collapse;
 }
+
+tr{
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
 
 .cities {
     font-size: 25px;
@@ -32,4 +47,11 @@
 
 .image {
     width: 100px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    background: rgb(236,240,241);
+    margin: 0;
 }

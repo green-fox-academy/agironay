@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 let myPix = [
-  {url: '../static/pics/1.jpg', title: 'Lofoten', descriptiontext: 'Beautiful Lofoten', first: 0},
+  {url: '../static/pics/1.jpg', title: 'Lofoten', descriptiontext: 'Beautiful Lofoten'},
   {url: '../static/pics/2.jpg', title: 'Senja', descriptiontext: 'Senja in Norway'},
   {url: '../static/pics/3.jpg', title: 'Ylvis', descriptiontext: 'I Kveld Med Yvlis - Norwegian talkshow'},
   {url: '../static/pics/4.jpg', title: 'Trolltunga', descriptiontext: 'Hanging over Ringedalsvatnet'},

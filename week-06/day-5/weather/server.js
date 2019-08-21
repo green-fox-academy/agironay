@@ -67,6 +67,10 @@ app.get('/', (req, res) => {
   res.render('home', { forecasts: forecasts });
 });
 
+app.get('/city', (req, res) => {
+  res.render('home', { forecasts: city });
+});
+
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
-});
+}); 

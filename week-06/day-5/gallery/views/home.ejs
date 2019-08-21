@@ -21,22 +21,23 @@
             <div class=table>
                 <tr>
                     <th>
-                        <h2 class = 'pictitle'><%=myPix[0].title%></h2>
+                        <h2 class='pictitle'><%=myPix[0].title%></h2>
                     </th>
                     <td>
-                        <p class = 'pictext'><%=myPix[0].descriptiontext%></p>
+                        <p class='pictext'><%=myPix[0].descriptiontext%></p>
                     </td>
                 </tr>
             </div>
         </div>
-        <div class='bigpic'><img src=<%= myPix[0].url%> height='400px' width ='900px'></div>
+        <%let n = 0 %>
+        <div class='bigpic'><img src=<%= myPix[n].url%> class = 'mainpic' height='400px' width='900px'></div>
     </div>
     <div class='thumbnails'>
-            <% for (let i = 0; i < myPix.length; i++){%>
-            <div class='pic'><img src=<%= myPix[i].url%> height='60px' width = '60px'></div>
-            <% } %>
+        <% for (let i = 0; i < myPix.length; i++){%>
+        <div class='pic'><img class = 'lilpic' src=<%= myPix[i].url%> height='60px' width='60px'></div>
+        <% } %>
     </div>
-    <script src='../app.js'></script>
+    <script src='./static/app.js'></script>
 </body>
 
 </html>
