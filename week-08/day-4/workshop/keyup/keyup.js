@@ -9,5 +9,5 @@ let displayCode = document.getElementsByTagName('h1')[0];
 document.addEventListener('keypress', logWhichKey);
 
 function logWhichKey(key) {
-    displayCode.textContent = `Last pressed key code is: ${key.code}`;
+    displayCode.textContent = `Last pressed key is: ${key.code} and its code is: ${key.keyCode} `;
 }
