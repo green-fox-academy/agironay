@@ -7,15 +7,13 @@
 
 let button = document.querySelector('button');
 
-/* button.addEventListener('click', createTimeStamp); */
-
-function createTimeStamp(){
+function createTimeStamp() {
   let date = new Date();
   let today = date.toDateString();
   let time = date.toLocaleTimeString();
   let newP = document.createElement('p');
   newP.innerHTML = (`Today is ${today} and the time when you clicked is: ${time}`);
-  document.body.appendChild(newP); 
+  document.body.appendChild(newP);
 }
 
-button.addEventListener('click', createTimeStamp);
+button.addEventListener('click', createTimeStamp, {once: true});
