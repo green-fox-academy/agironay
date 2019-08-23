@@ -15,7 +15,7 @@ body {
     font-family: 'Trebuchet MS';
 }
 
-h1{
+h1 {
     margin-left: 20px;
     font-weight: 500;
 }
@@ -28,16 +28,17 @@ form {
     border-color: rgba(38, 194, 129, 1);
 }
 
-#username, #password{
+#username, #password {
     display: block;
     width: 250px;
-};
-
-#password {
-    background-image: url('eye.png') no-repeat;
 }
 
-.eye{
+#password {
+    background:white  url('eye.png') right no-repeat;
+    padding-right: 17px;
+}
+
+.eye {
     height:15px;
     width: 15px;
 }
