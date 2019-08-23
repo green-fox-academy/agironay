@@ -7,7 +7,12 @@ Here is an image inspector, but the buttons are not implemented yet, that will b
    - one for navigation
    - one for zooming */
 
-let box = document.getElementsByClassName('img-inspector')[0].style.backgroundImage = `url('weirdo.jpg')`;
+let size = 200;
+let x = 0;
+let y = 0;
+
+let pic = document.getElementsByClassName('img-inspector')[0];
+
 
 let moveClick = document.querySelectorAll(`[data-action='move']`);
 /* function moveImage() {
@@ -18,16 +23,14 @@ let moveClick = document.querySelectorAll(`[data-action='move']`);
 
 
 let zoomClick = document.querySelectorAll(`[data-action='zoom']`)[0];
+/* let zoomOutClick = document.querySelectorAll(`[data-action='zoom']`)[1]; */
+
 function zoomImage() {
-  if(zoomClick.innerHTML === 'Zoom in'){
-    box.style.backgroundSize +=20%;
-  } 
+  if (zoomClick.innerHTML === 'Zoom in') {
+    pic.style.backgroundSize = `${size += 20}%`
+  } else if (zoomOutClick.innerHTML === 'Zoom out') {
+    pic.style.backgroundSize = `${size - 20}%`
+  }
 }
-
-/* zoomClick.forEach(function(items){
-  console.log(items.innerHTML)
-})
- */
-
 
 zoomClick.addEventListener('click', zoomImage);

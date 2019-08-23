@@ -28,19 +28,20 @@ form {
     border-color: rgba(38, 194, 129, 1);
 }
 
-#username, #password {
+#username {
     display: block;
     width: 250px;
 }
 
 #password {
-    background:white  url('eye.png') right no-repeat;
+    background:white url('eye.png') right no-repeat;
     padding-right: 17px;
+    width: 233px;
 }
 
-.eye {
-    height:15px;
-    width: 15px;
+
+input:focus {
+    outline: none;
 }
 
 p {
@@ -61,4 +62,3 @@ button {
     height: 30px;
     margin-left: 20px;
 }
-
