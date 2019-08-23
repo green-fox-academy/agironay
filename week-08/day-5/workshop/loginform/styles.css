@@ -1,0 +1,63 @@
+body {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 50px;
+    background-color: white;
+    height: 250px;
+    width: 300px;
+    padding: 30px;
+    text-transform: uppercase;
+    justify-content: center;
+    font-family: 'Trebuchet MS';
+}
+
+h1{
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+form {
+    margin-left: 20px;
+}
+
+#username:focus { 
+    border-color: rgba(38, 194, 129, 1);
+}
+
+#username, #password{
+    display: block;
+    width: 250px;
+};
+
+#password {
+    background-image: url('eye.png') no-repeat;
+}
+
+.eye{
+    height:15px;
+    width: 15px;
+}
+
+p {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+    color: lightslategray;
+    text-transform: capitalize;
+    margin-right: 25px;
+}
+
+button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+}
+
