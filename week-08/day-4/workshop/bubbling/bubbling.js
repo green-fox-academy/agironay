@@ -8,29 +8,48 @@ Here is an image inspector, but the buttons are not implemented yet, that will b
    - one for zooming */
 
 let size = 200;
-let x = 0;
-let y = 0;
+let xCoord = 0;
+let yCoord = 0;
 
 let pic = document.getElementsByClassName('img-inspector')[0];
+let buttons = document.querySelector('nav')
 
-
-let moveClick = document.querySelectorAll(`[data-action='move']`);
-/* function moveImage() {
-  
-} */
-
-//moveClick.addEventListener('click', moveImage);
-
-
-let zoomClick = document.querySelectorAll(`[data-action='zoom']`)[0];
-/* let zoomOutClick = document.querySelectorAll(`[data-action='zoom']`)[1]; */
-
-function zoomImage() {
-  if (zoomClick.innerHTML === 'Zoom in') {
-    pic.style.backgroundSize = `${size += 20}%`
-  } else if (zoomOutClick.innerHTML === 'Zoom out') {
-    pic.style.backgroundSize = `${size - 20}%`
-  }
+function zoomImageIn() {
+  pic.style.backgroundSize = `${size += 20}%`
+}
+function zoomImageOut() {
+  pic.style.backgroundSize = `${size -= 20}%`
 }
 
-zoomClick.addEventListener('click', zoomImage);
+function moveImageUp() {
+  pic.style.backgroundPosition = `${xCoord}px ${yCoord -= 10}px`;
+}
+
+function moveImageDown() {
+  pic.style.backgroundPosition = `${xCoord}px ${yCoord += 10}px`;
+}
+
+function moveImageRight() {
+  pic.style.backgroundPosition = `${xCoord += 10}px ${yCoord}px`;
+}
+
+function moveImageLeft() {
+  pic.style.backgroundPosition = `${xCoord -= 10}px ${yCoord}px`;
+}
+
+
+buttons.addEventListener('click', event => {
+  if (event.target.dataset.direction === 'up') {
+    moveImageUp();
+  } else if (event.target.dataset.direction === 'down') {
+    moveImageDown();
+  } else if (event.target.dataset.direction === 'left') {
+    moveImageLeft();
+  } else if (event.target.dataset.direction === 'right') {
+    moveImageRight();
+  } else if (event.target.dataset.direction === 'in') {
+    zoomImageIn()
+  } else if (event.target.dataset.direction === 'out') {
+    zoomImageOut();
+  }
+})
