@@ -4,13 +4,14 @@ const PORT = 3000;
 
 app.set('view engine', 'ejs');
 
+const todos = [
+    'get up',
+    'survive',
+    'go back to bed'
+];
+
 app.get('/todos', (req, res) => {
-    res.render('server', {
-        todos : ['get up',
-            'survive',
-            'go back to bed',
-        ]
-    })
+    res.render('server', {todos: todos});
 });
 
 app.listen(PORT, () => {

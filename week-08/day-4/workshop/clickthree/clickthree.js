@@ -19,5 +19,4 @@ function countClicks() {
 }
 
 
-
 button.addEventListener('click', countClicks)
