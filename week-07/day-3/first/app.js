@@ -23,7 +23,6 @@ app.get('/doubling/', (req, res) => {
     } else {
         res.send('error: Please provide an input!')
     }
-    res.status(200);
 })
 
 app.get('/greeter', (req, res) => {
@@ -36,16 +35,16 @@ app.get('/greeter', (req, res) => {
     } else {
         res.send({ error: `Please provide a name and a title!` })
     }
-    res.status(200);
-})
+});
 
 app.get('/appenda/:appendable', (req, res) => {
     if (req.params.appendable !== undefined) {
-        res.send({ 'appended': req.params.appendable + 'a' })
+        res.send({appended: req.params.appendable + 'a' });
     } else if (req.params.appendable == undefined) {
         res.status(404);
     }
-})
+});
+
 
 
 function numSum(upto) {
@@ -68,19 +67,17 @@ function numFact(uptil) {
 //console.log(numFact(5));
 
 app.post('/dountil/:action', (req, res) => {
-    let output = {};
-    if (req.params.action == 'sum') {
-        res.json({
+    if (req.params.action === 'sum') {
+        res.send({
             'result': numSum(req.body.until)
         });
-    } else if (req.params.action == 'factor') {
-        res.json({
+    } else if (req.params.action === 'factor') {
+        res.send({
             'result': numFact(req.body.until)
         });
     } else {
         output = { error: `Please provide a number!` }
     }
-    res.send(output);
 })
 
 app.listen(PORT, () => {
