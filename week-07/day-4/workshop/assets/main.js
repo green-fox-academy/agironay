@@ -67,10 +67,16 @@ let th2 = document.createElement('th');
 let th3 = document.createElement('th');
 let th4 = document.createElement('th');
 let tr = document.createElement('tr')
-th.textContent = 'Book Name';
+th.textContent = 'Title';
 table.append(th)
-th2.textContent = 'Author Name';
+th2.textContent = 'Author';
 table.append(th2);
+th3.textContent = 'Genre';
+table.append(th3);
+th4.textContent = 'Publisher';
+table.append(th4);
+/* th5.textContent = 'Price';
+table.append(th5); */
 
 function showAll(data) {
   for (let i = 0; i < data.length; i++) {
@@ -80,6 +86,12 @@ function showAll(data) {
     cell1.textContent = data[i].book_name;
     let cell2 = row.insertCell(1);
     cell2.textContent = data[i].aut_name;
+    let cell3 = row.insertCell(2);
+    cell3.textContent = data[i].cate_descrip;
+    let cell4 = row.insertCell(3);
+    cell4.textContent = data[i].pub_name;
+/*     let cell5 = row.insertCell(4);
+    cell5.textContent = data[i].book_price; */
   }
 }
 
