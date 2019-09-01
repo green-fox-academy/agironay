@@ -28,12 +28,12 @@ app.get('/doubling/', (req, res) => {
 app.get('/greeter', (req, res) => {
     if (req.query.name !== undefined && req.query.title !== undefined) {
         res.send({ welcome_message: `Oh, hi there ${req.query.name}, my dear ${req.query.title}!` })
-    } else if (req.query.title == undefined && req.query.input == undefined) {
+    } else if (req.query.name == undefined && req.query.title == undefined) {
         res.send({ error: `Please provide a name and a title!` })
     } else if (req.query.name == undefined) {
         res.send({ error: `Please provide a name!` })
     } else {
-        res.send({ error: `Please provide a name and a title!` })
+        res.send({ error: `Please provide a title!` })
     }
 });
 
