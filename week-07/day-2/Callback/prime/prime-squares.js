@@ -14,36 +14,37 @@ for (let i = 1; i <= 100; i++) {
 
 let div = document.querySelectorAll('div')
 
-function checkIfPrime(num) {
-  for (let j = 0; j <= num; j++) {
+function checkIfPrime() {
+  for (let j = 0; j <= div.length; j++) {
     let counter = 0;
     for (let i = 2; i <= j; i++) {
       if ((j + 1) % i === 0) {
         counter++
       }
+      (function (j) {
+        setTimeout(function () {
+          if (counter === 0) {
+            div[j].setAttribute('class', 'prime')
+          } else if (counter >= 1) {
+            div[j].setAttribute('class', 'not-prime')
+          }
+          div[1].setAttribute('class', 'not-prime')
+          div[0].setAttribute('class', 'not-prime')
+        }, 100 * j);
+      })(j);
+
     }
-    if (counter === 0) {
-      div[j].setAttribute('class', 'prime')
-    } else if (counter >= 1) {
-      div[j].setAttribute('class', 'not-prime')
-    }
-    div[1].setAttribute('class', 'not-prime')
-    div[0].setAttribute('class', 'not-prime')
   }
 }
 
-checkIfPrime(100)
+checkIfPrime()
 
 //3: Create a timer that keeps calling the prime validatior function until it reaches the end of elements
 //    - the timer should fire every 100ms
 //    - the timer should stop when there are no more elements left to be colored
 
-
-/*
-div.forEach(function (items) {
-  items.setInterval(checkIfPrime(100))
-}, 1000) */
-
-/* for (let i = 0; i < div.length; i++){
-  setInterval(checkIfPrime(100), 100)
-} */
+/* setInterval(function () {
+  div.forEach(function (items) {
+    items(checkIfPrime(100));
+  });
+},1000) */
