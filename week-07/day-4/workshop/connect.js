@@ -9,46 +9,51 @@ const app = express();
 app.use(express.static('assets'));
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'bookstore'
+  host: 'localhost',
+  user: 'root',
+  password: 'password',
+  database: 'bookstore'
 });
 
 connection.connect(function (err) {
-    if (err) {
-        console.log(err);
-        return;
-    }
-    console.log("Connection established");
+  if (err) {
+    console.log(err);
+    return;
+  }
+  console.log('Connection established');
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname+ '/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
-
 app.get('/books', (req, res) => {
-    connection.query('SELECT book_name FROM book_mast', (err, rows) => {
-        if (err) {
-            console.log(err.toString())
-        } else {
-            res.send(rows)
-        }
-    })
+  connection.query('SELECT book_name FROM book_mast;', (err, rows) => {
+    res.send(rows)
+  })
 });
 
 app.get('/author', (req, res) => {
-    connection.query('SELECT aut_name FROM author', (err, resp) => {
-        if (err) {
-            console.log(err.toString())
-        } else {
-            res.send(resp)
-        }
-    })
+  connection.query('SELECT aut_name FROM author', (err, resp) => {
+    if (err) {
+      console.log(err)
+    } else {
+      res.send(resp)
+    }
+  })
+});
+
+app.get('/allinfo',(req, res) =>{
+  connection.query('SELECT book_name, aut_name, cate_descrip, pub_name, book_price FROM book_mast, author, category, publisher WHERE author.aut_id=book_mast.aut_id AND category.cate_id=book_mast.cate_id AND publisher.pub_id=book_mast.pub_id;',(err, ress) =>{
+    if (err){
+      console.log(err)
+    } else {
+      res.send(ress)
+    }
+  });
 });
 
 
 app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`);
+  console.log(`Listening on port ${PORT}`);
 });
