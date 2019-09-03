@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple layout</title>
+    <style>
+        body {
+            background-color: white;
+            width: 900px;
+        }
+        .container {
+            display: grid;
+            width: 100%;
+            grid-template-areas:
+                "header header header"
+                "side main main"
+                "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 3fr 25fr 2fr;
+            grid-gap: 10px;
+        }
+
+        .header {
+            background-color: purple;
+            grid-area: header;
+            border-radius: 5px;
+        }
+
+        .link {
+            background-color: cyan;
+            display: inline-grid;
+            height: 30px;
+            width: 70px;
+            margin: 5px;
+            margin-top: 20px;
+        }
+
+        .main {
+            background-color: yellow;
+            grid-area: main;
+            margin-right: 40px;
+        }
+
+        .side {
+            background-color: darkslategrey;
+            grid-area: side;
+            margin-left: 40px;
+        }
+
+        .footer {
+            background-color: gray;
+            grid-area: footer;
+            margin: 0 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="link"></div>
+            <div class="link"></div>
+            <div class="link"></div>
+            <div class="link"></div>
+        </div>
+        <div class="side"></div>
+        <div class="main"></div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

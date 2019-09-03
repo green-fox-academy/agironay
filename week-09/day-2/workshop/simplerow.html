@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Row</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 80px;
+            background-color: purple;
+            font-size: 30px;
+            color: white;
+            padding: 5px;
+        }
+        
+        .left {
+            background-color: yellow;
+        }
+
+        .right {
+            background-color: yellow;
+        }
+
+        .middle {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">left</div>
+        <div class="middle">60 is my ratio</div>
+        <div class=right>right</div>
+    </div>
+</body>
+
+</html>

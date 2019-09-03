@@ -90,8 +90,8 @@ function showAll(data) {
     cell3.textContent = data[i].cate_descrip;
     let cell4 = row.insertCell(3);
     cell4.textContent = data[i].pub_name;
-/*     let cell5 = row.insertCell(4);
-    cell5.textContent = data[i].book_price; */
+    /*     let cell5 = row.insertCell(4);
+        cell5.textContent = data[i].book_price; */
   }
 }
 

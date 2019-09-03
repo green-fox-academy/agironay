@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Big area</title>
+    <style>
+        body {
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            background: #333;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, 80px);
+            grid-auto-flow: column;
+            grid-gap: 5px;
+            justify-content: center;
+        }
+
+        .little {
+            background-color: purple;
+        }
+
+        .big {
+            background-color: green;
+            grid-column: 2/4;
+            grid-row: 1/3;
+            position: relative;
+        }
+
+
+        .yellow {
+            background-color: yellow;
+            height: 80px;
+            min-width: 60%;
+            position: absolute;
+            left: 100px;
+            top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="little"></div>
+        <div class="little"></div>
+        <div class="little"></div>
+        <div class="little"></div>
+        <div class="little"></div>
+        <div class="big">
+            <div class="yellow"></div>
+        </div>
+    </div>
+</body>
+
+</html>
