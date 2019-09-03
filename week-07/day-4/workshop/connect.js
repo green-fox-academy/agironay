@@ -47,9 +47,8 @@ app.get('/allinfo',(req, res) =>{
   connection.query('SELECT book_name, aut_name, cate_descrip, pub_name, book_price FROM book_mast, author, category, publisher WHERE author.aut_id=book_mast.aut_id AND category.cate_id=book_mast.cate_id AND publisher.pub_id=book_mast.pub_id;',(err, ress) =>{
     if (err){
       console.log(err)
-    } else {
-      res.send(ress)
     }
+    res.send(ress)
   });
 });
 

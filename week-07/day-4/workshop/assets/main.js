@@ -1,5 +1,4 @@
 'use strict';
-
 /* const xhr = new XMLHttpRequest();
 
 
@@ -20,9 +19,6 @@ function showTitles(data) {
     document.body.appendChild(pElement)
   }
 }
-
-/* let titleButton = document.querySelector('.titles');
-titleButton.addEventListener('click', showTitles);
 
 xhr.open('GET', 'http://localhost:3000/books');
 xhr.send('ok');
@@ -95,5 +91,11 @@ function showAll(data) {
   }
 }
 
-xhr3.open('GET', 'http://localhost:3000/allinfo');
-xhr3.send('ok');
+
+let hehe = function () {
+  xhr3.open('GET', 'http://localhost:3000/allinfo');
+  xhr3.send('ok');
+}
+
+let infoButton = document.querySelector('.info');
+infoButton.addEventListener('click', hehe);
