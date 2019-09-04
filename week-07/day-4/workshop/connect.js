@@ -33,24 +33,13 @@ app.get('/books', (req, res) => {
   })
 });
 
-/* app.get('/books/:id', function (req, res){
-  const id = req.params.id;
-  if(id)
-  connection.query('SELECT * FROM book_mast WHERE book_id = ?;', id, (err, rows) => {
-    if(err){
-      res.send(err.toString)
-    } else {
-      res.send(rows)
-    }
-  })
-});*/
 
 app.get('/author', (req, res) => {
   connection.query('SELECT aut_name FROM author', (err, resp) => {
     if (err) {
       console.log(err)
     } else {
-      res.json(resp)
+      res.send(resp)
     }
   })
 });
@@ -60,7 +49,7 @@ app.get('/allinfo',(req, res) =>{
     if (err){
       console.log(err)
     }
-    res.json(ress)
+    res.send(ress)
   });
 });
 

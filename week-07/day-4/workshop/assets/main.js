@@ -22,9 +22,9 @@ function showTitles(data) {
 
 xhr.open('GET', 'http://localhost:3000/books');
 xhr.send('ok');
-*/
 
-/* const xhr2 = new XMLHttpRequest();
+
+const xhr2 = new XMLHttpRequest();
 xhr2.onreadystatechange = function () {
   if (xhr2.readyState === XMLHttpRequest.DONE) {
     if (xhr2.status === 200) {
@@ -44,7 +44,7 @@ function showAuthors(data) {
 }
 
 xhr2.open('GET', 'http://localhost:3000/author');
-xhr2.send('ok');  */
+xhr2.send('ok'); */
 
 const xhr3 = new XMLHttpRequest();
 xhr3.onreadystatechange = function () {

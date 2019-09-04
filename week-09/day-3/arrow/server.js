@@ -1,6 +1,6 @@
 'use strict';
 
-const routes = require('../iamgroot/routes');
+const routes = require('../arrow/route');
 const port = 3000;
 
 routes.listen(port, () => {
