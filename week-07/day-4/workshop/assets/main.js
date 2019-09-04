@@ -22,9 +22,9 @@ function showTitles(data) {
 
 xhr.open('GET', 'http://localhost:3000/books');
 xhr.send('ok');
+*/
 
-
-const xhr2 = new XMLHttpRequest();
+/* const xhr2 = new XMLHttpRequest();
 xhr2.onreadystatechange = function () {
   if (xhr2.readyState === XMLHttpRequest.DONE) {
     if (xhr2.status === 200) {
@@ -44,7 +44,7 @@ function showAuthors(data) {
 }
 
 xhr2.open('GET', 'http://localhost:3000/author');
-xhr2.send('ok'); */
+xhr2.send('ok');  */
 
 const xhr3 = new XMLHttpRequest();
 xhr3.onreadystatechange = function () {
@@ -62,7 +62,8 @@ let th = document.createElement('th');
 let th2 = document.createElement('th');
 let th3 = document.createElement('th');
 let th4 = document.createElement('th');
-let tr = document.createElement('tr')
+let th5 = document.createElement('th');
+
 th.textContent = 'Title';
 table.append(th)
 th2.textContent = 'Author';
@@ -71,8 +72,8 @@ th3.textContent = 'Genre';
 table.append(th3);
 th4.textContent = 'Publisher';
 table.append(th4);
-/* th5.textContent = 'Price';
-table.append(th5); */
+th5.textContent = 'Price';
+table.append(th5);
 
 function showAll(data) {
   for (let i = 0; i < data.length; i++) {
@@ -86,8 +87,8 @@ function showAll(data) {
     cell3.textContent = data[i].cate_descrip;
     let cell4 = row.insertCell(3);
     cell4.textContent = data[i].pub_name;
-    /*     let cell5 = row.insertCell(4);
-        cell5.textContent = data[i].book_price; */
+    let cell5 = row.insertCell(4);
+    cell5.textContent = data[i].book_price;
   }
 }
 

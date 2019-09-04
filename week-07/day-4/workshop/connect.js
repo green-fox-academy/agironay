@@ -43,14 +43,14 @@ app.get('/books', (req, res) => {
       res.send(rows)
     }
   })
-}); */
+});*/
 
 app.get('/author', (req, res) => {
   connection.query('SELECT aut_name FROM author', (err, resp) => {
     if (err) {
       console.log(err)
     } else {
-      res.send(resp)
+      res.json(resp)
     }
   })
 });
@@ -60,7 +60,7 @@ app.get('/allinfo',(req, res) =>{
     if (err){
       console.log(err)
     }
-    res.send(ress)
+    res.json(ress)
   });
 });
 
