@@ -24,12 +24,12 @@ connection.connect(function (err) {
 });
 
 
-
-
-
-
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/book', (req, res) => {
+  res.sendFile(__dirname + '/bookindex.html');
 });
 
 app.get('/books', (req, res) => {
@@ -39,7 +39,7 @@ app.get('/books', (req, res) => {
 });
 
 app.get('/authors', (req, res) => {
-  res.sendFile(__dirname + '/secondindex.html');
+  res.sendFile(__dirname + '/author.html');
 });
 
 app.get('/author', (req, res) => {
@@ -72,18 +72,6 @@ app.get('/allinfo', (req, res) => {
     res.send(ress)
   });
 });
-
-/* app.get('/allinfo/category/cat', (req, res) => {
-  let myCat = req.query.cate_descrip;
-  connection.query('SELECT * FROM category WHERE cate_descrip=?;', myCat, function (err, res) {
-    if (err) {
-      console.log(err)
-    } else {
-      res.send(res)
-    }
-  });
-}) */
-
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);

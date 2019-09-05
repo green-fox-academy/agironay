@@ -6,7 +6,6 @@ xhr2.onreadystatechange = function () {
     if (xhr2.status === 200) {
       let reply = JSON.parse(xhr2.responseText)
       showAuthors(reply)
-      console.log(reply);
     } else {
         console.log('sumfins wong')
     }

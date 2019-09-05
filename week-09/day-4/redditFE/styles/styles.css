@@ -1,0 +1,10 @@
+body{
+    display: grid;
+}
+
+header{
+    background-image: url('../styles/source.jpg');
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+}
