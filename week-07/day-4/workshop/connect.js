@@ -23,16 +23,24 @@ connection.connect(function (err) {
   console.log('Connection established');
 });
 
+
+
+
+
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/books', (req, res) => {
   connection.query('SELECT book_name FROM book_mast;', (err, rows) => {
-      res.send(rows)
+    res.send(rows)
   })
 });
 
+app.get('/authors', (req, res) => {
+  res.sendFile(__dirname + '/secondindex.html');
+});
 
 app.get('/author', (req, res) => {
   connection.query('SELECT aut_name FROM author', (err, resp) => {
@@ -44,14 +52,37 @@ app.get('/author', (req, res) => {
   })
 });
 
-app.get('/allinfo',(req, res) =>{
-  connection.query('SELECT book_name, aut_name, cate_descrip, pub_name, book_price FROM book_mast, author, category, publisher WHERE author.aut_id=book_mast.aut_id AND category.cate_id=book_mast.cate_id AND publisher.pub_id=book_mast.pub_id;',(err, ress) =>{
-    if (err){
+app.get('/category', (req, res) => {
+  connection.query('SELECT cate_descrip FROM category;', (err, rows) => {
+    res.send(rows)
+  })
+});
+
+app.get('/publisher', (req, res) => {
+  connection.query('SELECT pub_name FROM publisher;', (err, rows) => {
+    res.send(rows)
+  })
+});
+
+app.get('/allinfo', (req, res) => {
+  connection.query('SELECT book_name, aut_name, cate_descrip, pub_name, book_price FROM book_mast, author, category, publisher WHERE author.aut_id=book_mast.aut_id AND category.cate_id=book_mast.cate_id AND publisher.pub_id=book_mast.pub_id;', (err, ress) => {
+    if (err) {
       console.log(err)
     }
     res.send(ress)
   });
 });
+
+/* app.get('/allinfo/category/cat', (req, res) => {
+  let myCat = req.query.cate_descrip;
+  connection.query('SELECT * FROM category WHERE cate_descrip=?;', myCat, function (err, res) {
+    if (err) {
+      console.log(err)
+    } else {
+      res.send(res)
+    }
+  });
+}) */
 
 
 app.listen(PORT, () => {

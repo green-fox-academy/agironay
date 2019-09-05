@@ -95,6 +95,9 @@ function showAll(data) {
 
 let hehe = function () {
   xhr3.open('GET', 'http://localhost:3000/allinfo');
+  //xhr3.open('GET', 'http://localhost:3000/books');
+  //xhr3.open('GET', 'http://localhost:3000/category');
+  //xhr3.open('GET', 'http://localhost:3000/publisher');
   xhr3.send('ok');
 }
 
