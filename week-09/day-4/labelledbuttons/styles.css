@@ -2,3 +2,34 @@ body{
     background-color: rgb(49, 56, 65);
 }
 
+.container{
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: repeat(3, 100px);
+    grid-auto-flow: row;
+    justify-content: center;
+}
+
+button{
+    margin: 20px;
+    height: 50px;
+    width: 50px;
+    background-color: whitesmoke;
+}
+
+.overlay{
+    overflow: hidden;
+    height: 100%;
+    transition: .5s ease;
+    width: 100px;
+    background-color: red;
+}
+
+#garbage:hover .overlay{
+    width: 100%;
+}
+
+.text{
+    color: white;
+    font-size: 20px;
+}
