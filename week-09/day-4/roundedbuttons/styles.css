@@ -1,0 +1,68 @@
+body{
+    background: linear-gradient(lightblue, darkslateblue);
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 150px);
+}
+
+
+.button{
+    height: 50px;
+    width: 120px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 1px 3px 3px 1px;
+    border-bottom: 3px solid black;
+}
+
+.button:hover{
+    filter: brightness(70%);
+}
+
+.button:active{
+    filter: brightness(80%);
+}
+
+#blue{
+    background-color: darkslateblue;
+}
+
+#green{
+    background-color: green;
+}
+
+#red{
+    background-color: red;
+}
+
+#light{
+    background-color: lightblue;
+    color: black;
+}
+
+#black{
+    background-color: black;
+}
+
+#white{
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 520px){
+    .container{
+        grid-auto-flow: column;
+        grid-template-columns: 300px;
+        grid-template-rows: repeat(6, 100px);
+    }
+}

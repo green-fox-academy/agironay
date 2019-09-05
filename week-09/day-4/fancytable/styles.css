@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    height: 300px;
+    width: 500px;
+    background-color: lightslategrey;
+}
+
+table{
+    margin-top: 50px;
+    margin-left: 50px;
+    border-collapse: collapse;
+    width: 400px;
+}
+
+td:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+th{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+tr:nth-child(even){
+    background-color: lightsteelblue
+}
+
+tr:nth-child(odd){
+    background-color: lightgray
+}
+
+th{
+    text-align: left;
+}
+
+td:nth-child(2)::after {
+    content: "$50,000.00";
+}
+
+table, th, td{
+    border: 2px solid darkgray;
+}
