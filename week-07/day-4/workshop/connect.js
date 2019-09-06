@@ -52,17 +52,6 @@ app.get('/author', (req, res) => {
   })
 });
 
-app.get('/category', (req, res) => {
-  connection.query('SELECT cate_descrip FROM category;', (err, rows) => {
-    res.send(rows)
-  })
-});
-
-app.get('/publisher', (req, res) => {
-  connection.query('SELECT pub_name FROM publisher;', (err, rows) => {
-    res.send(rows)
-  })
-});
 
 app.get('/allinfo', (req, res) => {
   connection.query('SELECT book_name, aut_name, cate_descrip, pub_name, book_price FROM book_mast, author, category, publisher WHERE author.aut_id=book_mast.aut_id AND category.cate_id=book_mast.cate_id AND publisher.pub_id=book_mast.pub_id;', (err, ress) => {
@@ -73,8 +62,25 @@ app.get('/allinfo', (req, res) => {
   });
 });
 
+
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
 
 //filtering still needed
+//one filter
+/* app.get('/allinfo/:publisher', (req, res) => {
+  connection.query('SELECT pub_name FROM publisher;', (err, rows) => {
+    res.send(rows)
+  })
+}); */
+
+/* app.get('/allinfo/:something', (req, res) => {
+  if (req.query.something === '') {
+    console.log('no');
+  } else if (req.query.something === category) {
+    connection.query('SELECT pub_name FROM publisher;', (err, rows) => {
+      res.send(rows)
+    });
+  }
+}); */
