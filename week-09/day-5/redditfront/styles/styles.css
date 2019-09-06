@@ -1,10 +1,59 @@
-body{
+.container{
     display: grid;
+    background-color: rgb(238, 238, 238);
+    font-family: 'lato';
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 300px 400px;
+    grid-auto-flow: column;
 }
-
 header{
     background-image: url('../styles/source.jpg');
     background-repeat: no-repeat;
     height: 300px;
     width: 100%;
+    color: white;
+    text-align: center;
+    font-family: 'lato';
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: 40px;
+    grid-column: 1/span 2;
+}
+
+
+main{
+    background-color: white;
+    height: 400px;
+    width: 2fr;
+    margin: 10px;
+}
+
+#description{
+    height: 200px;
+    width: 200px;
+    background-color: lightgoldenrodyellow;
+}
+
+button{
+    background-color:rgb(74, 163, 223);
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 3px 25px;
+    font-weight: 600;
+}
+
+.about{
+    background-color: rgb(251, 251, 251);
+}
+
+.aside{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#share, ul{
+    font-size: 14px;
 }
