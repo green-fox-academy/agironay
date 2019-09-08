@@ -3,7 +3,7 @@
     background-color: rgb(238, 238, 238);
     font-family: 'lato';
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 300px 400px;
+    grid-template-rows: 300px auto;
     grid-auto-flow: column;
 }
 header{
@@ -23,9 +23,19 @@ header{
 
 main{
     background-color: white;
-    height: 400px;
     width: 2fr;
     margin: 10px;
+}
+
+.theposts{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.theposts>div{
+    border-top: 2px solid rgb(238, 238, 238);
+    padding: 10px;
 }
 
 #description{
@@ -57,3 +67,9 @@ button{
 #share, ul{
     font-size: 14px;
 }
+
+/* @media screen and (max-width: 500px){
+    body{
+
+    }
+} */

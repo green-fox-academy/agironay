@@ -6,6 +6,7 @@ const express = require('express');
 const PORT = 3000;
 const app = express();
 
+
 app.use(express.static('assets'));
 
 const connection = mysql.createConnection({
@@ -69,18 +70,11 @@ app.listen(PORT, () => {
 
 //filtering still needed
 //one filter
-/* app.get('/allinfo/:publisher', (req, res) => {
-  connection.query('SELECT pub_name FROM publisher;', (err, rows) => {
+app.get('/search', (req, res) => {
+  connection.query('SELECT book_name, pub_name FROM publisher;', (err, rows) => {
     res.send(rows)
   })
-}); */
-
-/* app.get('/allinfo/:something', (req, res) => {
-  if (req.query.something === '') {
-    console.log('no');
-  } else if (req.query.something === category) {
-    connection.query('SELECT pub_name FROM publisher;', (err, rows) => {
-      res.send(rows)
-    });
+  if (req.query.category){
+    connection.query('SELECT')
   }
-}); */
+});
