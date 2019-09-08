@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Submit new post</title>
+    <link rel="stylesheet" href="../styles/styles.css" type="text/css">
+    <style>
+        body {
+            background-color: rgb(238, 238, 238);
+        }
+
+        .container2 {
+            display: grid;
+            grid-auto-flow: rows;
+            margin: 20px;
+            background-color: white;
+            width: 354px;
+        }
+        
+        label,input {
+            width: 350px;
+        }
+        
+        input{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>HECK<img src="../styles/alien.png" height="40px"> T</header>
+    <div class="container2">
+        <form class="newpost">
+            <label for="title">name of your post:</label>
+            <input type="text" placeholder="funny xdxd lol!4!" required autofocus>
+            <label for="url">link:</label>
+            <input type="text" required placeholder="www.haha.com">
+        </form>
+    </div>
+    <button>Submit post</button>
+    <a href="../views/index.html"><button>nah, go back fam</button></a>
+</body>
+
+</html>
