@@ -8,7 +8,8 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 
-//app.use(express.static(__dirname + '/views'));
+app.set('view engine','ejs')
+app.use(express.static('assets'));
 app.use(express.json());
 
 const connection = mysql.createConnection({
@@ -26,15 +27,14 @@ connection.connect(function (err) {
     }
 });
 
-app.get('/', (req, res) => {
-    //res.send('hello')
-    res.sendFile('/views/index.html', { root: __dirname });
+app.get('/',(req,res)=>{
+    res.render('index');
 });
 
-app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
     //res.send('hello')
     res.sendFile('/views/submit.html', { root: __dirname });
-});
+}); */
 
 
 app.listen(PORT, () => {
