@@ -26,9 +26,14 @@ connection.connect(function (err) {
     }
 });
 
-app.get('/',(req, res)=>{
+app.get('/', (req, res) => {
     //res.send('hello')
     res.sendFile('/views/index.html', { root: __dirname });
+});
+
+app.get('/', (req, res) => {
+    //res.send('hello')
+    res.sendFile('/views/submit.html', { root: __dirname });
 });
 
 
