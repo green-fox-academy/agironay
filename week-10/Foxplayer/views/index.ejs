@@ -14,7 +14,7 @@
 
         <div id="foxbutton"><img id="foxpic" src="imgs/foxplayer.png"></div>
         <div class="notifications-wrapper">
-            <p id="notifications">notifications</p>
+            <p id="notifications" class="w1">notifications notifications notifications notifications</p>
         </div>
         <div id="artwork"><img id="musicpic" src="imgs/Ylvis-TheFox.jpg"></div>
         <div id="playlist">Playlist<img class="addpic2" src="imgs/add.png"></div>
@@ -27,10 +27,10 @@
                 <p>Favorites</p>
             </div>
             <div class="playlist">
-                <p>Relaxing music for programming</p><img id="delete1" src="imgs/delete.png">
+                <p>Relaxing music for programming</p><img class="delete1" src="imgs/delete.png">
             </div>
             <div class="playlist">
-                <p>Party</p><img id="delete1" src="imgs/delete.png">
+                <p>Party</p><img class="delete1" src="imgs/delete.png">
             </div>
         </div>
 
@@ -45,18 +45,18 @@
         <div id="tracks">
             <div class="song">
                 <div class="numbers">
-                    <p>2</p>
+                    <p>1</p>
                 </div>
                 <div class="listed-title">
                     <p>*songtitle</p>
                 </div>
                 <div class="song-length">
-                    <p id="song-length">4:56</p>
+                    <p>4:56</p>
                 </div>
             </div>
             <div class="song">
                 <div class="numbers">
-                    <p>3</p>
+                    <p>2</p>
                 </div>
                 <div class="listed-title">
                     <p>*yeyeye*</p>
@@ -69,12 +69,15 @@
 
 
         <div class="audio-player">
+            <audio src="music/Organoid_-_09_-_Purple_Drift.mp3"></audio>
+            <audio src="music/05 - Chlorine.mp3"></audio>
+            <audio src="music/02-fever_333-burn_it-60e7ec4c.mp3"></audio>
             <img class="audiobutton" id="prev" src="imgs/previous.svg">
             <img class="audiobutton" id="play" src="imgs/play.svg">
+            <img class="audiobutton" id="pause" src ="imgs/pause.svg">
             <img class="audiobutton" src="imgs/next.svg" id="next">
-            <!-- <audio controls src="music/Organoid_-_09_-_Purple_Drift.mp3"></audio> -->
             <p id="time-elapsed">3:16</p>
-            <input type="range" min="1" max="10" value="50" class="slider" id="song-slider">
+                <input type="range" min="1" max="10" value="50" class="slider" id="song-slider">
             <p class="song-length">4:46</p>
             <img src="imgs/shuffle.svg" id="shuffle">
             <img src="imgs/volume.svg" id="volume">
