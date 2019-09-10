@@ -38,22 +38,25 @@
         <div id="current">
             <h3 id="currently-title">currently playing song: salalala</h3>
             <p id="currently-artist">currently playing artist: sánánáná</p>
-            <div class="buttons"><img class="addpic" src="imgs/add.png" id="addsong">
+            <span class="buttons"><img class="addpic" src="imgs/add.png" id="addsong">
                 <img class="star" src="imgs/star.svg">
-            </div>
+            </span>
         </div>
         <div id="tracks">
+            <%for (let i = 1; i < 5; i++){%>
             <div class="song">
                 <div class="numbers">
-                    <p>1</p>
+                    <p><%=i%></p>
                 </div>
                 <div class="listed-title">
-                    <p>*songtitle</p>
+                    <p>title</p>
                 </div>
                 <div class="song-length">
-                    <p>4:56</p>
+                    <p>3:56</p>
                 </div>
             </div>
+            <%}%>
+
             <div class="song">
                 <div class="numbers">
                     <p>2</p>
@@ -69,15 +72,11 @@
 
 
         <div class="audio-player">
-            <audio src="music/Organoid_-_09_-_Purple_Drift.mp3"></audio>
-            <audio src="music/05 - Chlorine.mp3"></audio>
-            <audio src="music/02-fever_333-burn_it-60e7ec4c.mp3"></audio>
             <img class="audiobutton" id="prev" src="imgs/previous.svg">
             <img class="audiobutton" id="play" src="imgs/play.svg">
-            <img class="audiobutton" id="pause" src ="imgs/pause.svg">
             <img class="audiobutton" src="imgs/next.svg" id="next">
             <p id="time-elapsed">3:16</p>
-                <input type="range" min="1" max="10" value="50" class="slider" id="song-slider">
+            <input type="range" min="1" max="10" value="50" class="slider" id="song-slider">
             <p class="song-length">4:46</p>
             <img src="imgs/shuffle.svg" id="shuffle">
             <img src="imgs/volume.svg" id="volume">
