@@ -10,14 +10,19 @@
         input{
             width: 300px;
         }
+        .submitbutton{
+            width: 60px;
+        }
     </style>
 </head>
 
 <body>
-    <form class="newpost">
+    <form class="newplaylist" action="/playlists" target="_self" method="POST">
         <label for="title">Name your new playlist:</label>
-        <input type="text" placeholder="100 hours relaxing death metal♥" required autofocus >
+        <input type="text" placeholder="100 hours relaxing death metal♥" name="title" required autofocus >
+        <input class="submitbutton" type="submit" value="Submit">
     </form>
+    <a href="http://localhost:3000/"><button>go back to main</button></a>
 </body>
 
 </html>
