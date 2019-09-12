@@ -45,7 +45,6 @@ app.get('/playlists', (req, res) => {
 
 app.get('/listplaylists', (req, res) => {
     connection.query('SELECT id,title FROM playlists;', (err, rows) => {
-        //res.render('index', {rows});
         res.send(rows);
     })
 });
@@ -56,6 +55,12 @@ app.get('/tracks',(req,res)=>{
     })
 })
 
+/* app.get('/playlists-tracks',(req,res)=>{
+    connection.query('SELECT * FROM tracks;',(err,res)=>{
+        res.send(res)
+    })
+});
+ */
 
 app.post('/playlists', (req, res) => {
     let newPlaylist = req.body.title;
@@ -78,7 +83,7 @@ app.delete('/playlists', (req, res) => {
             console.log(err);
             res.sendStatus(500);
         } else {
-            console.log(`deleted playlist called: `, +deletePlaylist);
+            console.log(`deleted playlist with id: `, +deletePlaylist);
         }
     })
 });
