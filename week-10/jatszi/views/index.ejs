@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice</title>
+    <style>
+        .container{
+            display: grid;
+            grid-auto-columns: 200px;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <container class="container">
+        <form method="POST" action="/school/class">
+            <label for="nickname">Nickname:</label>
+            <input type="text" name="nickname" class="nickname" required autofocus>
+            <label for="curricular">Chosen extracurricular activity:</label>
+            <input type="text" name="curricular" class="curricular" required>
+            <input type="submit" class="submit"></label>
+        </form>
+    </container>
+    <script href="./app.js"></script>
+</body>
+
+</html>
