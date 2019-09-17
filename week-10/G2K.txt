@@ -1,4 +1,5 @@
 0. fork, clone, navigate to the right directory → git clone *ctrl+c link*,
+0.1 COMMIT SEVERAL TIMES
 
 1. install packages
 
