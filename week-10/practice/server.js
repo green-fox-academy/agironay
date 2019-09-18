@@ -67,24 +67,24 @@ app.get('/tickets', (req, res) => {
 })
 
 app.post('/tickets', (req, res) => {
-  const { reporter, manufacturer, serialno, description } = req.body;
+  //const { reporter, manufacturer, serialno, description } = req.body;
+  const data = req.body
   console.log(req.body);
   let date = new Date(); //when creating the table → DATETIME :)
   //validation..,
-  if (!reporter || !manufacturer || !serialno || !descript) {
+  if (!data.reporter || !data.manufacturer || !data.serialno || !data.description) {
     res.status(400);
-  } else if (isNaN(Number.parseInt(serialno))) {
+  } else if (isNaN(Number.parseInt(data.serialno))) {
     res.status(401);
   } else {
     connection.query('INSERT INTO dummytable (reporter, manufacturer, serialno, description, date) VALUES (?, ?, ?, ?, ?)',
-      [reporter, manufacturer, serialno, description, date], (err, resp) => {
+      [data.reporter, data.manufacturer, data.serialno, data.description, date], (err, resp) => {
         if (err) {
-          res.send({ message: 'something is wrong' });
+          res.status(500).send({ message: 'something is wrong' });
           return;
         }
-        res.status(200)
-        res.send({ message: `new report added to ${manufacturer} manufacturer` })
-        console.log(`new report added to ${manufacturer} manufacturer`);
+        res.status(200).send({ message: `new report added to ${data.manufacturer} manufacturer` })
+        console.log(`new report added to ${data.manufacturer} manufacturer`);
       })
   }
 });

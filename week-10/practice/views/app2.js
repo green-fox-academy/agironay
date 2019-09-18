@@ -19,9 +19,9 @@ fetch('/users')
     }
   })
   
-reportButton.addEventListener('submit', e => {
+reportButton.addEventListener('click', e => {
   e.preventDefault();
-  let id = document.querySelector('select').value
+  let id = document.querySelector('.select').value
   fetch('/tickets', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
