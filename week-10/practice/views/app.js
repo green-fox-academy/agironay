@@ -2,60 +2,39 @@
 
 let form = document.querySelector('form');
 let reportButton = document.querySelector('.report');
-//let reporter = document.querySelector('.')
 let manufacturer = document.querySelector('.manufacturer');
 let serialno = document.querySelector('.serialno');
 let description = document.querySelector('.description');
-let row = document.querySelector('td');
-
-fetch('/users')
-  .then(response => response.json())
-  .then(response2 => {
-    let myJson = response2.users;
-    for (let i = 0; i < myJson.length; i++) {
-      const select = document.querySelector('select');
-      const option = document.createElement('option');
-      option.value = `${myJson[i].id}`;
-      option.text = `${myJson[i].name}`;
-      select.appendChild(option);
-    }
-  })
 
 
-reportButton.addEventListener('click', e => {
-  e.preventDefault();
-  let id = document.querySelector('select').value;
-  fetch('/tickets', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      reporter: id,
-      manufacturer: manufacturer.value,
-      serialno: serialno.value,
-      description: description.value,
+
+
+let trrow = document.querySelector('tr');
+let deleteButton = document.querySelectorAll('.deletebutton');
+function deleteWithButton() {
+  deleteButton.forEach(function (button) {
+    let rowToRemove = button.parentElement.parentElement;
+    let getID = button.parentElement.parentElement.children[0].innerHTML;
+    button.addEventListener('click', function () {
+      console.log('clicked row to be deleted')
+      console.log(getID)
+      console.log(rowToRemove)
+      window.location.reload();
+      fetch(`/tickets/${getID}`, {
+        method: 'DELETE'
+      })
+      .then(response => {
+        if (response.status == 204) {
+          rowToRemove.remove();
+          console.log(`${getId} row with this id `)
+          return;
+        }
+      })
+      .catch(error => console.error(error))
     })
   })
-    .then(response => response.json())
-    .then(result => console.log(result))
-    .catch(error => console.error(error))
-});
-
-function deleteWithButton() {
-  let deleteButton = document.querySelector('.deletebutton');
-  deleteButton.addEventListener('click', e => {
-    /* let tr = document.querySelector(tr);
-    console.log(tr); */
-    console.log('hello there')
-  })
 }
-fetch('/tickets/:id', {
-  method: 'DELETE',
-  headers: {
-    authorization: 'voala'
-  }
-})
-  .then(response => response.json())
-  .then(deleteWithButton)
-  .catch(error => console.error(error))
 
+fetch('/tickets')
+.then(res => { deleteWithButton(); return res })
 

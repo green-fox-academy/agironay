@@ -2,7 +2,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 //app.use(bodyParser.urlencoded());
 
 app.set('view engine', 'ejs');
@@ -60,7 +60,16 @@ app.post('/api/links', (req, res) => {
     })
 });
 
-
+/* app.delete('/api/links/:id',(req,res)=>{
+    let deleteID = req.params.id;
+    connection.query('DELETE FROM alias WHERE id = ?',[deleteID], (err,rows)=>{
+        if (err){
+            res.status(500).send({error: 'something is wrong'})
+        } else {
+            res.send(rows)
+        }
+    })
+}) */
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
