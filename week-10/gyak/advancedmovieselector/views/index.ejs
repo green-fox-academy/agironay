@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Selector</title>
+    <style>
+        body {
+            font-family: 'arial';
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 150px 150px;
+            grid-template-rows: repeat(3, 20px);
+            grid-gap: 5px;
+        }
+
+        nav {
+            display: inline-block;
+        }
+
+        .submitnewmovie {
+            border-radius: 5px;
+            width: 100px;
+            align-self: center;
+            grid-column-start: 2;
+        }
+
+        .submitnewmovie:hover,
+        .choosegenre:hover,
+        .choosemovie:hover {
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>Home</nav>
+    <nav><a href="http://localhost:3000/infos">Movies</a></nav>
+    <h1>Welcome To The GFA Movies!</h1>
+
+        <select class="choosegenre">
+            <option disabled selected>Select genre</option>
+        </select>
+
+        <select class="choosemovie">
+            <option disabled selected>Select movie</option>
+        </select>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
